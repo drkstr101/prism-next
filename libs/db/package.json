@@ -1,0 +1,16 @@
+{
+  "name": "@prism-next/db",
+  "version": "0.0.1",
+  "dependencies": {
+    "@swc/helpers": "~0.5.2",
+    "@pubsweet/db-manager": "^3.1.21"
+  },
+  "peerDependencies": {
+    "@coko/server": "^3.0.0",
+    "config": "3.3.9",
+    "knex": "^0.21.1"
+  },
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "typings": "./src/index.d.ts"
+}
