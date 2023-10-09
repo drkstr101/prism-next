@@ -58,12 +58,6 @@
           "codeCoverage": true
         }
       }
-    },
-    "pubsweet-migrate": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "pubsweet migrate"
-      }
     }
   },
   "tags": []

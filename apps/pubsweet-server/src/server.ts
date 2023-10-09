@@ -1,5 +1,5 @@
-import { startServer, logger } from '@coko/server';
-import { migrate } from '@pubsweet/db-manager';
+import { logger, startServer } from '@coko/server';
+import { setupDatabase } from '@prism-next/db';
 import { once } from 'events';
 import express from 'express';
 import http from 'http';
@@ -15,8 +15,8 @@ export class ExpressServer {
 
   public async boot() {
     if (process.env['NODE_ENV'] !== 'production') {
-      logger.info('Refreshing migrations.');
-      await migrate();
+      logger.info('Initializing database.');
+      await setupDatabase();
     }
   }
 
