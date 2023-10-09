@@ -2,7 +2,11 @@
   "name": "@prism-next/db",
   "version": "0.0.1",
   "dependencies": {
+    "@coko/server": "^3.0.0",
     "@swc/helpers": "~0.5.2"
+  },
+  "peerDependencies": {
+    "knex": "^0.21.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",
