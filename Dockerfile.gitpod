@@ -25,3 +25,5 @@ RUN sudo apt-get install -y \
   xauth \
   xvfb
 
+# Install shellcheck
+RUN sudo DEBIAN_FRONTEND=noninteractive apt-get install shellcheck -y

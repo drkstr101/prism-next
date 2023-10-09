@@ -7,6 +7,7 @@
     "orta.vscode-jest",
     "kavod-io.vscode-jest-test-adapter",
     "stylelint.vscode-stylelint",
-    "hbenl.vscode-test-explorer"
+    "hbenl.vscode-test-explorer",
+    "timonwong.shellcheck"
   ]
 }
