@@ -17,8 +17,8 @@ jobs:
   main:
     name: CI - Main Job
     runs-on: ubuntu-latest
-    # # Docker Hub image that `container-job` executes in
-    # container: 'node:lts-hydrogen'
+    # Docker Hub image that `container-job` executes in
+    container: node:lts-hydrogen
     # # Service containers to run with `container-job`
     # services:
     #   # Label used to access the service container
