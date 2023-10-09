@@ -45,7 +45,7 @@ jobs:
       - name: Use the package manager cache if available
         uses: actions/cache@v3
         with:
-          path: ~/.yarn
+          path: '${{ github.workspace }}/.yarn/cache'
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-
@@ -104,7 +104,7 @@ jobs:
       - name: Use the package manager cache if available
         uses: actions/cache@v3
         with:
-          path: ~/.yarn
+          path: '${{ github.workspace }}/.yarn/cache'
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-
