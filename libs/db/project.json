@@ -38,6 +38,13 @@
           "codeCoverage": true
         }
       }
+    },
+    "seed": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["build"],
+      "options": {
+        "command": "node dist/libs/db/src/seed.js"
+      }
     }
   },
   "tags": []

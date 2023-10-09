@@ -23,7 +23,20 @@ module.exports = {
     },
   },
   teams: {
-    global: {},
+    global: {
+      editor: {
+        displayName: 'Editor',
+        role: 'editor',
+      },
+      reviewer: {
+        displayName: 'Reviewer',
+        role: 'reviewer',
+      },
+      admin: {
+        displayName: 'Admin',
+        role: 'admin',
+      },
+    },
     nonGlobal: {},
   },
   authsome: {
