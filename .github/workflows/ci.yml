@@ -92,6 +92,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      # set git hashes for comparison
+      - uses: nrwl/nx-set-shas@v3
+
       # Set node/npm/yarn versions using volta
       - uses: volta-cli/action@v4
         with:
