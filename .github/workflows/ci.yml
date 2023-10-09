@@ -13,22 +13,36 @@ permissions:
 
 jobs:
   main:
-    name: Nx Cloud - Main Job
-    uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.13.1
-    with:
-      main-branch-name: main
-      number-of-agents: 3
-      init-commands: |
-        yarn nx-cloud start-ci-run --stop-agents-after="build" --agent-count=3
-      parallel-commands: |
-        yarn nx-cloud record -- yarn nx format:check
-      parallel-commands-on-agents: |
-        yarn nx affected --target=lint --parallel=3
-        yarn nx affected --target=test --parallel=3 --ci --code-coverage
-        yarn nx affected --target=build --parallel=3
+    name: Main CI Job
+    # Containers must run in Linux based operating systems
+    runs-on: ubuntu-latest
+    # Docker Hub image that `container-job` executes in
+    container: 'node:lts-hydrogen'
 
-  agents:
-    name: Nx Cloud - Agents
-    uses: nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.13.1
-    with:
-      number-of-agents: 3
+    # Service containers to run with `container-job`
+    services:
+      # Label used to access the service container
+      db:
+        # Docker Hub image
+        image: supabase/postgres
+        # Provide env vars for postgres
+        env:
+          POSTGRES_DB: test
+          POSTGRES_PASSWORD: postgres
+        # Set health checks to wait until postgres has started
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: nrwl/nx-set-shas@v3
+      - run: yarn --frozen-lockfile
+      - run: yarn nx format:check
+      - run: yarn nx affected --target=lint --parallel=3
+      - run: yarn nx affected --target=test --parallel=3
+      - run: yarn nx affected --target=build --parallel=3
