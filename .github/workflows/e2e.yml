@@ -13,7 +13,7 @@ env:
 
 jobs:
   main:
-    name: E2E - Main Job
+    name: 'E2E - Main Job'
 
     # Run this job against multiple node versions
     strategy:
@@ -44,19 +44,6 @@ jobs:
           --health-retries 5
 
     steps:
-      # run a script to install needed cypress dependencies
-      - name: Setup E2E environment
-        run: bash -c tools/scripts/setup-e2e-env.sh
-
-        # grab the workspace from source control
-      - name: Checkout [Pull Request]
-        uses: actions/checkout@v3
-        if: ${{ github.event_name == 'pull_request' }}
-        with:
-          # By default, PRs will be checked-out based on the Merge Commit, but we want the actual branch HEAD.
-          ref: ${{ github.event.pull_request.head.sha }}
-          # We need to fetch all branches and commits so that Nx affected has a base to compare against.
-          fetch-depth: 0
 
       - name: Checkout [Default Branch]
         uses: actions/checkout@v3
@@ -67,6 +54,10 @@ jobs:
 
       # Detect affected changes from git hashes
       - uses: nrwl/nx-set-shas@v3
+
+      # run a script to install needed cypress dependencies
+      - name: Setup E2E environment
+        run: bash -c tools/scripts/setup-e2e-env.sh
 
       # Restore system cache
       - name: Use the package manager cache if available
