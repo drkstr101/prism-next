@@ -8,6 +8,7 @@ on:
 env:
   NX_BRANCH: ${{ github.event.number || github.ref_name }}
   NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
+  POSTGRES_HOST: db
   POSTGRES_DB: test
   POSTGRES_PASSWORD: postgres
 
@@ -32,7 +33,7 @@ jobs:
       db:
         # Docker Hub image
         image: supabase/postgres
-        # Provide the password for postgres
+        # pass env vars needed for postgres startup
         env:
           POSTGRES_DB: test
           POSTGRES_PASSWORD: postgres
@@ -44,7 +45,6 @@ jobs:
           --health-retries 5
 
     steps:
-
       - name: Checkout [Default Branch]
         uses: actions/checkout@v3
         if: ${{ github.event_name != 'pull_request' }}
@@ -64,9 +64,9 @@ jobs:
         uses: actions/cache@v3
         with:
           path: '${{ github.workspace }}/.yarn/cache'
-          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-${{ matrix.node-version }}-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-
+            ${{ runner.os }}-${{ matrix.node-version }}-
 
       - name: Install workspace dependencies
         run: yarn --frozen-lockfile
