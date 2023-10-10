@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
-import Container from './common/Container'
+import Container from './common/Container';
 
 const ImageContainer = styled.div`
   height: 300px;
@@ -10,7 +10,7 @@ const ImageContainer = styled.div`
   img {
     height: 100%;
   }
-`
+`;
 
 const ImageDemo = () => (
   <Container second>
@@ -22,6 +22,6 @@ const ImageDemo = () => (
       <img alt="a bird" src="sample-image.jpg" />
     </ImageContainer>
   </Container>
-)
+);
 
-export default ImageDemo
+export default ImageDemo;

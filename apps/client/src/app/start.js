@@ -3,9 +3,9 @@
  * client. They will not be provided in the package distribution build.
  */
 
-import { startClient } from '../../../src'
-import routes from './routes'
-import theme from './theme'
+import { startClient } from '../../../src';
+import routes from './routes';
+import theme from './theme';
 
 // Make sure async functions are supported
 /* eslint-disable no-unused-vars */
@@ -13,4 +13,4 @@ import theme from './theme'
 //   await console.error('do it')
 // }
 
-startClient(routes, theme)
+startClient(routes, theme);

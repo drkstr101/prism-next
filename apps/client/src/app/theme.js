@@ -1,4 +1,4 @@
-import 'fontsource-advent-pro'
+import 'fontsource-advent-pro';
 
 const theme = {
   colorBackground: '#fefae0',
@@ -11,6 +11,6 @@ const theme = {
   lineHeight: '1.618',
 
   gridUnit: '8px',
-}
+};
 
-export default theme
+export default theme;

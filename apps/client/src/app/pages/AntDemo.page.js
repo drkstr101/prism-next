@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import AntDemo from '../ui/AntDemo'
+import AntDemo from '../ui/AntDemo';
 
 const AntPage = () => {
-  return <AntDemo />
-}
+  return <AntDemo />;
+};
 
-export default AntPage
+export default AntPage;

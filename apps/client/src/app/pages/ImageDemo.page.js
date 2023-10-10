@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import ImageDemo from '../ui/ImageDemo'
+import ImageDemo from '../ui/ImageDemo';
 
 const ImageDemoPage = () => {
-  return <ImageDemo />
-}
+  return <ImageDemo />;
+};
 
-export default ImageDemoPage
+export default ImageDemoPage;

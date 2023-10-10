@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
 
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import Container from './common/Container'
-import ItemList from './ItemList'
+import Container from './common/Container';
+import ItemList from './ItemList';
 
-const Root = props => {
-  const { data, loading } = props
+const Root = (props) => {
+  const { data, loading } = props;
 
   return (
     <Container>
@@ -19,7 +19,7 @@ const Root = props => {
 
       <ItemList data={data} loading={loading} />
     </Container>
-  )
-}
+  );
+};
 
-export default Root
+export default Root;

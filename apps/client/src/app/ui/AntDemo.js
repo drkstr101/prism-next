@@ -1,18 +1,18 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import { Select } from 'antd'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import { Select } from 'antd';
 
-import Button from './common/Button'
-import Container from './common/Container'
+import Button from './common/Button';
+import Container from './common/Container';
 
 const Explainer = styled.div`
   margin: 20px;
-`
+`;
 
 const Element = styled.div`
   margin: 10px;
-`
+`;
 
 const AntDemo = () => (
   <Container second>
@@ -20,9 +20,7 @@ const AntDemo = () => (
       <Link to="/">Go back</Link>
     </div>
 
-    <Explainer>
-      Changes to the primary color in the theme should be reflected here.
-    </Explainer>
+    <Explainer>Changes to the primary color in the theme should be reflected here.</Explainer>
 
     <Element>
       <Button type="primary">Primary button</Button>
@@ -39,6 +37,6 @@ const AntDemo = () => (
       />
     </Element>
   </Container>
-)
+);
 
-export default AntDemo
+export default AntDemo;

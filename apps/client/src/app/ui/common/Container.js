@@ -1,7 +1,7 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from 'styled-components';
 
 const Container = styled.div`
-  /* background: ${props => props.theme.colorBackground}; */
+  /* background: ${(props) => props.theme.colorBackground}; */
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -18,16 +18,16 @@ const Container = styled.div`
     text-transform: uppercase;
 
     &:hover {
-      outline: 2px solid ${props => props.theme.colorBorder};
+      outline: 2px solid ${(props) => props.theme.colorBorder};
     }
   }
 
-  ${props =>
+  ${(props) =>
     props.second &&
     css`
       align-items: center;
       justify-content: center;
     `}
-`
+`;
 
-export default Container
+export default Container;
