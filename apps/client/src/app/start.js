@@ -3,7 +3,7 @@
  * client. They will not be provided in the package distribution build.
  */
 
-import { startClient } from '../../../src';
+import { startClient } from '@coko/client';
 import routes from './routes';
 import theme from './theme';
 
