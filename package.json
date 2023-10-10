@@ -12,6 +12,7 @@
     "e2e": "cypress install && nx run cypress:e2e"
   },
   "dependencies": {
+    "@coko/client": "^0.0.46",
     "@coko/server": "^3.0.0",
     "@nx/next": "16.10.0",
     "@pubsweet/db-manager": "^3.1.21",
