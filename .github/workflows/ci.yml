@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   main:
-    name: Nx Cloud - Main Job
+    name: CI - Main Job
     uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.13.1
     with:
       main-branch-name: main
@@ -28,7 +28,7 @@ jobs:
         yarn nx affected --target=build --parallel=3
 
   agents:
-    name: Nx Cloud - Agents
+    name: CI - Agents
     uses: nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.13.1
     with:
       number-of-agents: 3
