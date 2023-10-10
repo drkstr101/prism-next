@@ -5,15 +5,42 @@
   "projectType": "application",
   "targets": {
     "e2e": {
-      "executor": "@nx/cypress:cypress",
+      "executor": "@nx-extend/e2e-runner:run",
       "options": {
+        "runner": "cypress",
         "cypressConfig": "apps/cypress/cypress.config.ts",
-        "devServerTarget": "home:serve:development",
-        "testingType": "e2e"
+        "testingType": "e2e",
+        "targets": [
+          {
+            "target": "home:serve:development",
+            "checkUrl": "http://localhost:4200/",
+            "checkMaxTries": 24
+          },
+          {
+            "target": "client:serve:development",
+            "checkUrl": "http://localhost:4000/",
+            "checkMaxTries": 24
+          },
+          {
+            "target": "server:serve:development",
+            "checkUrl": "http://localhost:3000/health",
+            "checkMaxTries": 24
+          }
+        ]
       },
       "configurations": {
         "production": {
-          "devServerTarget": "home:serve:production"
+          "targets": [
+            {
+              "target": "home:serve:production"
+            },
+            {
+              "target": "client:serve:production"
+            },
+            {
+              "target": "server:serve:production"
+            }
+          ]
         }
       }
     },

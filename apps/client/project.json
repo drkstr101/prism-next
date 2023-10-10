@@ -48,7 +48,7 @@
       "executor": "@nx/webpack:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "port": 3000,
+        "port": 4000,
         "buildTarget": "client:build",
         "hmr": true
       },

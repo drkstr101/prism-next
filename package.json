@@ -12,6 +12,7 @@
     "e2e": "cypress install && nx run cypress:e2e"
   },
   "dependencies": {
+    "@coko/client": "^0.0.46",
     "@coko/server": "^3.0.0",
     "@nx/next": "16.10.0",
     "@pubsweet/db-manager": "^3.1.21",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "@babel/core": "^7.14.5",
     "@babel/preset-react": "^7.14.5",
+    "@nx-extend/e2e-runner": "^7.0.0",
     "@nx/cypress": "16.10.0",
     "@nx/eslint-plugin": "16.10.0",
     "@nx/express": "^16.10.0",

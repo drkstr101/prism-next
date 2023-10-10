@@ -11,6 +11,9 @@ export class ExpressServer {
 
   constructor() {
     this.app = express();
+
+    // setup an endpoint for health checks
+    this.app.use('/health', (req, res) => res.send('OK'));
   }
 
   public async boot() {
