@@ -3,8 +3,7 @@
 set -euo pipefail
 
 # Install Cypress dependencies.
-sudo apt-get update &&
-  sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
+apt-get update && apt-get install -y \
     libgtk2.0-0 \
     libgtk-3-0 \
     libnotify-dev \
@@ -15,4 +14,4 @@ sudo apt-get update &&
     libxtst6 \
     xauth \
     xvfb &&
-  sudo rm -rf /var/lib/apt/lists/*
+  rm -rf /var/lib/apt/lists/*
