@@ -17,8 +17,8 @@
             "checkMaxTries": 24
           },
           {
-            "target": "client:serve:development",
-            "checkUrl": "http://localhost:4000/",
+            "target": "demo:serve:development",
+            "checkUrl": "http://localhost:4200/",
             "checkMaxTries": 24
           },
           {
@@ -35,7 +35,7 @@
               "target": "home:serve:production"
             },
             {
-              "target": "client:serve:production"
+              "target": "demo:serve:production"
             },
             {
               "target": "server:serve:production"
@@ -53,5 +53,5 @@
     }
   },
   "tags": [],
-  "implicitDependencies": ["home"]
+  "implicitDependencies": ["demo", "home", "server"]
 }
