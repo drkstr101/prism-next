@@ -9,7 +9,7 @@
     "test": "nx run-many --target=test --parallel=true --coverage=true",
     "lint": "nx format:check && nx run-many --target=lint --parallel=true",
     "format": "nx format",
-    "e2e": "cypress install && nx run cypress:e2e"
+    "e2e": "nx run cypress:e2e --skip-nx-cache"
   },
   "dependencies": {
     "@apollo/client": "^3.8.5",
