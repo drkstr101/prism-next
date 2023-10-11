@@ -1,8 +1,7 @@
 import { gql, useApolloClient, useMutation } from '@apollo/client';
 import { useCurrentUser } from '@coko/client';
-import React from 'react';
-
-import NavigationBar from '../ui/NavigationBar';
+import { NavigationBar } from '@prism-next/ui';
+import { useEffect } from 'react';
 
 const LOGIN = gql`
   mutation Login {
@@ -22,13 +21,13 @@ const NavigationBarPage = () => {
   const { currentUser, setCurrentUser } = useCurrentUser();
   // console.log(currentUser)
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (data) {
       const token = data.login?.token;
       if (token) localStorage.setItem('token', token);
       setCurrentUser(data.login.user);
     }
-  }, [data]);
+  }, [data, setCurrentUser]);
 
   const logout = () => {
     setCurrentUser(null);

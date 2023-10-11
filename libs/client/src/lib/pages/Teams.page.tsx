@@ -1,7 +1,5 @@
 import { gql, useMutation } from '@apollo/client';
 import { useCurrentUser } from '@coko/client';
-import React from 'react';
-
 import Teams from '../ui/Teams';
 
 const ADD = gql`

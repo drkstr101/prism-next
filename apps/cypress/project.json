@@ -18,7 +18,7 @@
           },
           {
             "target": "demo:serve:development",
-            "checkUrl": "http://localhost:4000/",
+            "checkUrl": "http://localhost:4200/",
             "checkMaxTries": 24
           },
           {
@@ -53,5 +53,5 @@
     }
   },
   "tags": [],
-  "implicitDependencies": ["home", "demo", "server"]
+  "implicitDependencies": ["demo", "home", "server"]
 }

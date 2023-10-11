@@ -1,8 +1,6 @@
-import React from 'react';
+import { Container } from '@prism-next/ui';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-
-import Container from './common/Container';
 
 const ImageContainer = styled.div`
   height: 300px;

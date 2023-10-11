@@ -1,30 +1,25 @@
 import { Authenticate, PageLayout, RequireAuth } from '@coko/client';
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 import { AntDemo, ImageDemo, NavigationBar, Protected, Root, Teams } from './pages';
 
-const routes = (
+export default (
   <Authenticate>
     <PageLayout fadeInPages navComponent={NavigationBar} padPages>
-      <Switch>
-        <Route component={Root} exact path="/" />
-        <Route component={ImageDemo} exact path="/imagedemo" />
-        <Route component={AntDemo} exact path="/ant" />
-        <Route component={Teams} exact path="/teams" />
-
+      <Routes>
+        <Route element={<Root />} path="/" />
+        <Route element={<ImageDemo />} path="/imagedemo" />
+        <Route element={<AntDemo />} path="/ant" />
+        <Route element={<Teams />} path="/teams" />
         <Route
-          exact
           path="/protected"
-          render={() => (
+          element={
             <RequireAuth notAuthenticatedRedirectTo="/" requireIdentityVerification={false}>
               <Protected />
             </RequireAuth>
-          )}
+          }
         />
-      </Switch>
+      </Routes>
     </PageLayout>
   </Authenticate>
 );
-
-export default routes;

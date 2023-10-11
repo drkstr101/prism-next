@@ -1,10 +1,7 @@
-import React from 'react';
+import { Button, Container } from '@prism-next/ui';
+import { Select } from 'antd';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { Select } from 'antd';
-
-import Button from './common/Button';
-import Container from './common/Container';
 
 const Explainer = styled.div`
   margin: 20px;

@@ -1,10 +1,5 @@
-/* eslint-disable react/prop-types */
-
-import React from 'react';
+import { Container, ItemList } from '@prism-next/ui';
 import { Link } from 'react-router-dom';
-
-import Container from './common/Container';
-import ItemList from './ItemList';
 
 const Root = (props) => {
   const { data, loading } = props;
