@@ -6,7 +6,7 @@ A demonstration of best practices for developing applications with pubsweet.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/drkstr101/prism-next)
 
-Run `docker compose up --detach && yarn start` to launch all applications and services in development mode. Any build artifacts will be stored in the `dist/` directory, ready to be deployed. Other top level tasks include: `format`, `lint`, `test`, `build`, and `e2e`.
+Run `docker compose up --detach && yarn start` to launch all applications and services in development mode. Run `yarn build` to prepare a production release. Any build artifacts will be stored in the `dist/` directory, ready to be deployed. Other top-level tasks include: `format`, `lint`, `test`, and `e2e`.
 
 ## Background
 
