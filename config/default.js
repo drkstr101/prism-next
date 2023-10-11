@@ -10,6 +10,9 @@ module.exports = {
       path.resolve(__dirname, 'components/ping.js'),
     ],
   },
+  'pubsweet-client': {
+    port: 4000,
+  },
   'pubsweet-server': {
     host: 'localhost',
     port: 3000,

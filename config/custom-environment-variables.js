@@ -1,8 +1,11 @@
 module.exports = {
+  'pubsweet-client': {
+    port: 'CLIENT_PORT',
+  },
   'pubsweet-server': {
-    host: 'PUBSWEET_SERVER_HOST',
-    port: 'PUBSWEET_SERVER_PORT',
-    secret: 'PUBSWEET_SERVER_SECRET',
+    host: 'SERVER_HOST',
+    port: 'SERVER_PORT',
+    secret: 'SERVER_SECRET',
     db: {
       user: 'POSTGRES_USER',
       password: 'POSTGRES_PASSWORD',
