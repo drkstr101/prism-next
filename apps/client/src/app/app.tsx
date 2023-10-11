@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import NxWelcome from './nx-welcome';
 
-import { Route, Routes, Link } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 
 const StyledApp = styled.div`
   // Your style here

@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@prism-next/db": ["libs/db/src/index.ts"]
+      "@prism-next/db": ["libs/db/src/index.ts"],
+      "@prism-next/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
