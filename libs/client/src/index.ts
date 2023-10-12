@@ -1,1 +1,2 @@
-export { default as startClient } from './lib/start';
+export * from './lib/client';
+export type { ApolloConfigFunc, PubSweetClientProps } from './lib/client';

@@ -1,6 +1,19 @@
 import 'fontsource-advent-pro';
 
-const theme = {
+export interface PubSweetTheme {
+  colorBackground: string;
+  colorBorder: string;
+  colorPrimary: string;
+
+  fontInterface: string;
+  fontSize: string;
+  fontSizeBase: string;
+  lineHeight: string;
+
+  gridUnit: string;
+}
+
+export const defaultTheme: PubSweetTheme = {
   colorBackground: '#fefae0',
   colorBorder: 'lightslategray',
   colorPrimary: '#606c38',
@@ -12,5 +25,3 @@ const theme = {
 
   gridUnit: '8px',
 };
-
-export default theme;

@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import { AntDemo, ImageDemo, NavigationBar, Protected, Root, Teams } from './pages';
 
-export default (
+export const defaultRoutes = (
   <Authenticate>
     <PageLayout fadeInPages navComponent={NavigationBar} padPages>
       <Routes>
