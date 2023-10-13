@@ -9,18 +9,19 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import { WebSocketLink } from '@apollo/client/link/ws';
 import { getMainDefinition } from '@apollo/client/utilities';
-import { CurrentUserContext, serverUrl } from '@coko/client';
+import { Authenticate, PageLayout, RequireAuth } from '@coko/client';
 import { ConfigProvider as AntConfigProvider } from 'antd';
 import { createUploadLink } from 'apollo-upload-client';
 import pickBy from 'lodash/pickBy';
-import { useEffect, useRef, useState } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { ReactNode, createContext, useEffect, useRef, useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { Normalize } from 'styled-normalize';
 import { SubscriptionClient } from 'subscriptions-transport-ws';
-import { defaultRoutes } from './routes';
 import { PubSweetTheme } from './styled';
 import { defaultTheme } from './theme';
+
+import { AntDemo, ImageDemo, NavigationBar, Protected, Root, Teams } from './pages';
 
 export type ApolloConfigFunc = (
   options: ApolloClientOptions<unknown>
@@ -28,15 +29,21 @@ export type ApolloConfigFunc = (
 
 export interface PubSweetClientProps {
   makeApolloConfig?: ApolloConfigFunc;
-  routes?: JSX.Element;
+  children?: ReactNode;
   theme?: PubSweetTheme;
 }
 
+const serverUrl = import.meta.env.SERVER_URL ?? 'http://localhost:3000/';
 const wsMinTimeout = parseInt(process.env['CLIENT_WS_MIN_TIMEOUT'], 10) || 0;
 const wsTimeout = parseInt(process.env['CLIENT_WS_TIMEOUT'], 10) || 0;
 
 let wsLink;
 let webSocketClient;
+
+export const CurrentUserContext = createContext<{
+  currentUser?: any;
+  setCurrentUser?: any;
+}>({});
 
 const pxToNumConverter = (value: string): string | number => {
   if (typeof value === 'string') {
@@ -160,7 +167,7 @@ const makeApolloClient = (makeConfig: ApolloConfigFunc) => {
 
 export function PubSweetClient({
   makeApolloConfig,
-  routes = defaultRoutes,
+  children,
   theme = defaultTheme,
 }: PubSweetClientProps) {
   const [currentUser, setCurrentUser] = useState();
@@ -206,17 +213,37 @@ export function PubSweetClient({
 
   return (
     <ApolloProvider client={client.current}>
-      <BrowserRouter>
-        <CurrentUserContext.Provider value={{ currentUser, setCurrentUser }}>
-          <AntConfigProvider theme={mappedAntTheme}>
-            <ThemeProvider theme={theme}>
-              <Normalize />
-              <GlobalStyle />
-              {routes}
-            </ThemeProvider>
-          </AntConfigProvider>
-        </CurrentUserContext.Provider>
-      </BrowserRouter>
+      <CurrentUserContext.Provider value={{ currentUser, setCurrentUser }}>
+        <AntConfigProvider theme={mappedAntTheme}>
+          <ThemeProvider theme={theme}>
+            <Normalize />
+            <GlobalStyle />
+            {children ?? (
+              <Authenticate>
+                <PageLayout fadeInPages navComponent={NavigationBar} padPages>
+                  <Routes>
+                    <Route element={<Root />} path="/" />
+                    <Route element={<ImageDemo />} path="/imagedemo" />
+                    <Route element={<AntDemo />} path="/ant" />
+                    <Route element={<Teams />} path="/teams" />
+                    <Route
+                      path="/protected"
+                      element={
+                        <RequireAuth
+                          notAuthenticatedRedirectTo="/"
+                          requireIdentityVerification={false}
+                        >
+                          <Protected />
+                        </RequireAuth>
+                      }
+                    />
+                  </Routes>
+                </PageLayout>
+              </Authenticate>
+            )}
+          </ThemeProvider>
+        </AntConfigProvider>
+      </CurrentUserContext.Provider>
     </ApolloProvider>
   );
 }
