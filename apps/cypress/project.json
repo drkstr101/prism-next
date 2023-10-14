@@ -1,0 +1,50 @@
+{
+  "name": "cypress",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/cypress/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nx-extend/e2e-runner:run",
+      "options": {
+        "runner": "cypress",
+        "cypressConfig": "apps/cypress/cypress.config.ts",
+        "testingType": "e2e",
+        "targets": [
+          {
+            "target": "home:serve:development",
+            "checkUrl": "http://localhost:4200/",
+            "checkMaxTries": 32
+          }
+        ]
+      },
+      "configurations": {
+        "production": {
+          "targets": [
+            {
+              "target": "home:serve:production"
+            }
+          ]
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/cypress/**/*.{js,ts}"]
+      }
+    },
+    "publish": {
+      "executor": "@theunderscorer/nx-semantic-release:semantic-release",
+      "options": {
+        "github": true,
+        "changelog": true,
+        "npm": true,
+        "tagFormat": "cypress-v${VERSION}"
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["home"]
+}
