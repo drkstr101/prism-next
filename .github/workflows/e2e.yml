@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - starter
+      - design-system
 
 env:
   NX_BRANCH: ${{ github.event.number || github.ref_name }}

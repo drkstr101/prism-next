@@ -3,5 +3,5 @@
   "npm": true,
   "github": true,
   "repositoryUrl": "https://github.com/drkstr101/prism-next",
-  "branches": ["main", "starter"]
+  "branches": ["main", "starter", "design-system"]
 }
