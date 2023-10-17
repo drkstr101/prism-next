@@ -8,6 +8,10 @@ permissions:
   actions: read
   contents: read
 
+env:
+  # set working branch to design-system
+  NX_BASE: design-system
+
 jobs:
   main:
     name: CI - Main Job
