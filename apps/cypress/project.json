@@ -15,6 +15,11 @@
             "target": "home:serve:development",
             "checkUrl": "http://localhost:4200/",
             "checkMaxTries": 32
+          },
+          {
+            "target": "demo:serve:development",
+            "checkUrl": "http://localhost:4210/demo",
+            "checkMaxTries": 32
           }
         ]
       },
@@ -23,6 +28,9 @@
           "targets": [
             {
               "target": "home:serve:production"
+            },
+            {
+              "target": "demo:serve:production"
             }
           ]
         }
