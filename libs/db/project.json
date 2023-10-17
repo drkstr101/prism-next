@@ -35,13 +35,6 @@
         }
       }
     },
-    "seed": {
-      "executor": "nx:run-commands",
-      "dependsOn": ["build"],
-      "options": {
-        "command": "node dist/libs/db/src/seed.js"
-      }
-    },
     "publish": {
       "executor": "@theunderscorer/nx-semantic-release:semantic-release",
       "options": {
@@ -49,6 +42,13 @@
         "changelog": true,
         "npm": true,
         "tagFormat": "db-v${VERSION}"
+      }
+    },
+    "seed": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["build"],
+      "options": {
+        "command": "node dist/libs/db/src/seed.js"
       }
     }
   },

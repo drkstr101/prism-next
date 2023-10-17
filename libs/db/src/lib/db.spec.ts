@@ -1,6 +1,6 @@
 import { db } from './db';
 
-describe('db', () => {
+describe('prism-next.db', () => {
   it('should work', () => {
     expect(db()).toEqual('db');
   });

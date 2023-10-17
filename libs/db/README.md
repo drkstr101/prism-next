@@ -1,11 +1,5 @@
 # db
 
-This library was generated with [Nx](https://nx.dev).
+A helper library for raw data access.
 
-## Building
-
-Run `nx build db` to build the library.
-
-## Running unit tests
-
-Run `nx test db` to execute the unit tests via [Jest](https://jestjs.io).
+TODO - Placeholder Library Stubs
