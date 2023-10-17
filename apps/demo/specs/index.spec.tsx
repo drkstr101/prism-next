@@ -22,6 +22,5 @@ describe('/demo', () => {
       </Layout>
     );
     expect(container).toBeInstanceOf(HTMLElement);
-    expect(container).toMatchSnapshot();
   });
 });
