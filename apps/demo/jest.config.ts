@@ -1,4 +1,7 @@
-/* eslint-disable */
+import { Config } from 'jest';
+
+// const config:Config = ;
+
 export default {
   displayName: 'demo',
   preset: '../../jest.preset.js',
@@ -8,4 +11,5 @@ export default {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/apps/demo',
-};
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+} as Config;
