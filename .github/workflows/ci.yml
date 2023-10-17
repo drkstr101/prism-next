@@ -8,16 +8,13 @@ permissions:
   actions: read
   contents: read
 
-env:
-  # set working branch to design-system
-  NX_BASE: design-system
-
 jobs:
   main:
     name: CI - Main Job
     uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.13.1
     with:
-      main-branch-name: main
+      # set working branch to design-system
+      main-branch-name: design-system
       number-of-agents: 3
       init-commands: |
         yarn nx-cloud start-ci-run --stop-agents-after="build" --agent-count=3
