@@ -4,9 +4,6 @@
 const { composePlugins, withNx } = require('@nx/next');
 const config = require('config');
 
-console.log(`Loading config from: ${config.util.getEnv('NODE_CONFIG_DIR')}...`);
-console.log(config.util.toObject());
-
 /**
  * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
  **/

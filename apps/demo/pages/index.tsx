@@ -274,12 +274,10 @@ export function Index() {
               <Item key="trendy">Trendy</Item>
               <Item key="march 2020 assets">March 2020 Assets</Item>
             </Breadcrumbs>
-
             <Link href="https://www.imdb.com/title/tt6348138/" target="_blank" rel="noreferrer">
               The missing link.
-            </Link>
-            <Link href="/demo/foo">Foo</Link>
-
+            </Link>{' '}
+            <Link href="/foo">Foo</Link>
             <Tabs aria-label="History of Ancient Rome">
               <TabList>
                 <Item key="FoR">Founding of Rome</Item>

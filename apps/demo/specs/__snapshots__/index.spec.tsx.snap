@@ -1477,8 +1477,8 @@ exports[`/demo should render successfully 1`] = `
                           <div
                             aria-colindex="1"
                             class="_5uzlQq_spectrum-Table-headCell _5uzlQq_spectrum-Table-checkboxCell"
-                            data-key="row-header-column-r2vxtkxpojh"
-                            id="react-aria-:rd:-row-header-column-r2vxtkxpojh"
+                            data-key="row-header-column-bemz5cpt6lb"
+                            id="react-aria-:rd:-row-header-column-bemz5cpt6lb"
                             role="columnheader"
                             tabindex="-1"
                           >
@@ -5015,6 +5015,7 @@ exports[`/demo should render successfully 1`] = `
                 >
                   The missing link.
                 </a>
+                 
                 <a
                   class="WBgRPa_spectrum-Link spectrum-Link--primary"
                   href="/foo"
