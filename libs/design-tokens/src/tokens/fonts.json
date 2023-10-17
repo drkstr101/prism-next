@@ -1,0 +1,52 @@
+{
+  "font": {
+    "Spectrum Global Font Code": {
+      "family": {
+        "value": "Source Code Pro"
+      },
+      "weight": {
+        "value": "Regular"
+      }
+    },
+    "Spectrum Global Font Body": {
+      "family": {
+        "value": "Adobe Clean"
+      },
+      "weight": {
+        "value": "Regular"
+      }
+    },
+    "Spectrum Global Font Detail": {
+      "family": {
+        "value": "Adobe Clean"
+      },
+      "weight": {
+        "value": "Bold"
+      }
+    },
+    "Spectrum Global Font Heading": {
+      "family": {
+        "value": "Adobe Clean"
+      },
+      "weight": {
+        "value": "Bold"
+      }
+    }
+  },
+  "size": {
+    "font": {
+      "Spectrum Global Font Code": {
+        "value": "16"
+      },
+      "Spectrum Global Font Body": {
+        "value": "16"
+      },
+      "Spectrum Global Font Detail": {
+        "value": "12"
+      },
+      "Spectrum Global Font Heading": {
+        "value": "22"
+      }
+    }
+  }
+}
