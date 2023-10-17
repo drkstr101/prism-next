@@ -276,7 +276,7 @@ export function Index() {
             </Breadcrumbs>
             <Link href="https://www.imdb.com/title/tt6348138/" target="_blank" rel="noreferrer">
               The missing link.
-            </Link>{' '}
+            </Link>
             <Link href="/foo">Foo</Link>
             <Tabs aria-label="History of Ancient Rome">
               <TabList>
