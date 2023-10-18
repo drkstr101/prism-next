@@ -1,10 +1,11 @@
-@import 'fonts.css';
-@import 'global.css';
+@import url('fonts.css');
+@import url('global.css');
 
 html,
 body {
   margin: 0;
   text-size-adjust: none;
+  scroll-behavior: smooth;
 }
 
 a {

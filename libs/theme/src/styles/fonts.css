@@ -1,6 +1,6 @@
 /* pulled from https://use.typekit.net/uma8ayv.css to avoid an extra http request */
 @font-face {
-  font-family: 'adobe-clean';
+  font-family: adobe-clean;
   src: url('https://use.typekit.net/af/cb695f/000000000000000000017701/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
       format('woff2'),
     url('https://use.typekit.net/af/cb695f/000000000000000000017701/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
@@ -13,7 +13,7 @@
 }
 
 @font-face {
-  font-family: 'adobe-clean';
+  font-family: adobe-clean;
   src: url('https://use.typekit.net/af/74ffb1/000000000000000000017702/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
       format('woff2'),
     url('https://use.typekit.net/af/74ffb1/000000000000000000017702/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
@@ -26,7 +26,7 @@
 }
 
 @font-face {
-  font-family: 'adobe-clean';
+  font-family: adobe-clean;
   src: url('https://use.typekit.net/af/eaf09c/000000000000000000017703/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
       format('woff2'),
     url('https://use.typekit.net/af/eaf09c/000000000000000000017703/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
@@ -39,7 +39,7 @@
 }
 
 @font-face {
-  font-family: 'adobe-clean';
+  font-family: adobe-clean;
   src: url('https://use.typekit.net/af/40207f/0000000000000000000176ff/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3')
       format('woff2'),
     url('https://use.typekit.net/af/40207f/0000000000000000000176ff/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3')
@@ -52,7 +52,7 @@
 }
 
 @font-face {
-  font-family: 'adobe-clean-serif';
+  font-family: adobe-clean-serif;
   src: url('https://use.typekit.net/af/505d17/00000000000000003b9aee44/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3')
       format('woff2'),
     url('https://use.typekit.net/af/505d17/00000000000000003b9aee44/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3')
@@ -66,56 +66,63 @@
 
 /** pulled from web project id: 'uei1lip' */
 @font-face {
-  font-family: 'myriad-arabic';
+  font-family: myriad-arabic;
   src: url('https://use.typekit.net/af/ad6dbc/00000000000000007735a300/30/l?unicode=AAAHygAAAAdhg4V2jXrgvTqablOmIuR90xJ6f7oYX7HHszHOhbuHChMcgQn5RM8D_2_09h-EDof5QbhEgbbA63nwPrW_c-fWpSq9I3W2wnPr2mXL5hwU9XCfpfCkLYjBT4lM8H7L4ONWX3ugfaTSwXm4HDcbyteaHuCpkuHywfcZB3Qmfrf-lhmtbmdiEYP1_3wmtwTqUe-84RpPif-WvZba-nEoqF8x54v53DpQrOTj48ldu33mIr3t5_p7J-7EIbKWiAPY-6fOlmzgfKcT52EWvLAE-pP79aefMQlHioFliM5EGken-uDgxR0sm5rfhBd4WUTkH-k-gPs7g-WyugAAAb0&features=ALL&v=3');
   font-display: swap;
   font-style: normal;
   font-weight: 400;
 }
+
 @font-face {
-  font-family: 'myriad-arabic';
+  font-family: myriad-arabic;
   src: url('https://use.typekit.net/af/d1936b/00000000000000007735a2fd/30/l?unicode=AAAHygAAAAdhg4V2jXrgvTqablOmIuR90xJ6f7oYX7HHszHOhbuHChMcgQn5RM8D_2_09h-EDof5QbhEgbbA63nwPrW_c-fWpSq9I3W2wnPr2mXL5hwU9XCfpfCkLYjBT4lM8H7L4ONWX3ugfaTSwXm4HDcbyteaHuCpkuHywfcZB3Qmfrf-lhmtbmdiEYP1_3wmtwTqUe-84RpPif-WvZba-nEoqF8x54v53DpQrOTj48ldu33mIr3t5_p7J-7EIbKWiAPY-6fOlmzgfKcT52EWvLAE-pP79aefMQlHioFliM5EGken-uDgxR0sm5rfhBd4WUTkH-k-gPs7g-WyugAAAb0&features=ALL&v=3');
   font-display: swap;
   font-style: italic;
   font-weight: 400;
 }
+
 @font-face {
-  font-family: 'myriad-hebrew';
+  font-family: myriad-hebrew;
   src: url('https://use.typekit.net/af/e6598e/00000000000000007735a31b/30/l?unicode=AAAHygAAAAdhg4V2jXrgvTqablOmIuR90xJ6f7oYX7HHszHOhbuHChMcgQn5RM8D_2_09h-EDof5QbhEgbbA63nwPrW_c-fWpSq9I3W2wnPr2mXL5hwU9XCfpfCkLYjBT4lM8H7L4ONWX3ugfaTSwXm4HDcbyteaHuCpkuHywfcZB3Qmfrf-lhmtbmdiEYP1_3wmtwTqUe-84RpPif-WvZba-nEoqF8x54v53DpQrOTj48ldu33mIr3t5_p7J-7EIbKWiAPY-6fOlmzgfKcT52EWvLAE-pP79aefMQlHioFliM5EGken-uDgxR0sm5rfhBd4WUTkH-k-gPs7g-WyugAAAb0&features=ALL&v=3');
   font-display: swap;
   font-style: normal;
   font-weight: 400;
 }
+
 @font-face {
-  font-family: 'myriad-hebrew';
+  font-family: myriad-hebrew;
   src: url('https://use.typekit.net/af/26f595/00000000000000007735a313/30/l?unicode=AAAHygAAAAdhg4V2jXrgvTqablOmIuR90xJ6f7oYX7HHszHOhbuHChMcgQn5RM8D_2_09h-EDof5QbhEgbbA63nwPrW_c-fWpSq9I3W2wnPr2mXL5hwU9XCfpfCkLYjBT4lM8H7L4ONWX3ugfaTSwXm4HDcbyteaHuCpkuHywfcZB3Qmfrf-lhmtbmdiEYP1_3wmtwTqUe-84RpPif-WvZba-nEoqF8x54v53DpQrOTj48ldu33mIr3t5_p7J-7EIbKWiAPY-6fOlmzgfKcT52EWvLAE-pP79aefMQlHioFliM5EGken-uDgxR0sm5rfhBd4WUTkH-k-gPs7g-WyugAAAb0&features=ALL&v=3');
   font-display: swap;
   font-style: italic;
   font-weight: 400;
 }
+
 @font-face {
-  font-family: 'adobe-clean-han-japanese';
+  font-family: adobe-clean-han-japanese;
   src: url('https://use.typekit.net/af/3a5e38/00000000000000007735dabb/30/m?features=ALL&v=4&chunks=511&order=0');
   font-display: swap;
   font-style: normal;
   font-weight: 400;
 }
+
 @font-face {
-  font-family: 'adobe-clean-han-korean';
+  font-family: adobe-clean-han-korean;
   src: url('https://use.typekit.net/af/d5dab5/00000000000000007735dabc/30/m?features=ALL&v=4&chunks=511&order=0');
   font-display: swap;
   font-style: normal;
   font-weight: 400;
 }
+
 @font-face {
-  font-family: 'adobe-clean-han-simplified-c';
+  font-family: adobe-clean-han-simplified-c;
   src: url('https://use.typekit.net/af/e35bab/00000000000000007735dabd/30/m?features=ALL&v=4&chunks=511&order=0');
   font-display: swap;
   font-style: normal;
   font-weight: 400;
 }
+
 @font-face {
-  font-family: 'adobe-clean-han-traditional';
+  font-family: adobe-clean-han-traditional;
   src: url('https://use.typekit.net/af/758ab2/00000000000000007735dabe/30/m?features=ALL&v=4&chunks=511&order=0');
   font-display: swap;
   font-style: normal;

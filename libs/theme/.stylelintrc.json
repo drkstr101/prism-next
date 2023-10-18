@@ -1,0 +1,16 @@
+{
+  "extends": ["../../.stylelintrc.json"],
+  "ignoreFiles": ["!**/*"],
+  "overrides": [
+    {
+      "files": ["**/*.css"],
+      "rules": {
+        "selector-class-pattern": null
+      }
+    },
+    {
+      "files": ["**/*.scss"],
+      "rules": {}
+    }
+  ]
+}
