@@ -31,85 +31,85 @@
   --spectrum-global-animation-linear: cubic-bezier(0, 0, 1, 1);
 
   /* spectrum-colorGlobals.css */
-  --spectrum-global-color-status: Verified;
+  --spectrum-global-color-status: verified;
   --spectrum-global-color-version: 5.1.0;
-  --spectrum-global-color-static-black: rgb(0, 0, 0);
-  --spectrum-global-color-static-white: rgb(255, 255, 255);
-  --spectrum-global-color-static-blue: rgb(0, 87, 191);
-  --spectrum-global-color-static-gray-50: rgb(255, 255, 255);
-  --spectrum-global-color-static-gray-75: rgb(255, 255, 255);
-  --spectrum-global-color-static-gray-100: rgb(255, 255, 255);
-  --spectrum-global-color-static-gray-200: rgb(235, 235, 235);
-  --spectrum-global-color-static-gray-300: rgb(217, 217, 217);
-  --spectrum-global-color-static-gray-400: rgb(179, 179, 179);
-  --spectrum-global-color-static-gray-500: rgb(146, 146, 146);
-  --spectrum-global-color-static-gray-600: rgb(110, 110, 110);
-  --spectrum-global-color-static-gray-700: rgb(71, 71, 71);
-  --spectrum-global-color-static-gray-800: rgb(34, 34, 34);
-  --spectrum-global-color-static-gray-900: rgb(0, 0, 0);
-  --spectrum-global-color-static-blue-200: rgb(130, 193, 251);
-  --spectrum-global-color-static-blue-300: rgb(98, 173, 247);
-  --spectrum-global-color-static-blue-400: rgb(66, 151, 244);
-  --spectrum-global-color-static-blue-500: rgb(27, 127, 245);
-  --spectrum-global-color-static-blue-600: rgb(4, 105, 227);
-  --spectrum-global-color-static-blue-700: rgb(0, 87, 190);
-  --spectrum-global-color-static-blue-800: rgb(0, 72, 153);
-  --spectrum-global-color-static-red-400: rgb(237, 64, 48);
-  --spectrum-global-color-static-red-500: rgb(217, 28, 21);
-  --spectrum-global-color-static-red-600: rgb(187, 2, 2);
-  --spectrum-global-color-static-red-700: rgb(154, 0, 0);
-  --spectrum-global-color-static-orange-400: rgb(250, 139, 26);
-  --spectrum-global-color-static-orange-500: rgb(233, 117, 0);
-  --spectrum-global-color-static-orange-600: rgb(209, 97, 0);
-  --spectrum-global-color-static-orange-700: rgb(182, 80, 0);
-  --spectrum-global-color-static-green-400: rgb(29, 169, 115);
-  --spectrum-global-color-static-green-500: rgb(0, 148, 97);
-  --spectrum-global-color-static-green-600: rgb(0, 126, 80);
-  --spectrum-global-color-static-green-700: rgb(0, 105, 65);
-  --spectrum-global-color-static-celery-200: rgb(126, 229, 114);
-  --spectrum-global-color-static-celery-300: rgb(87, 212, 86);
-  --spectrum-global-color-static-celery-400: rgb(48, 193, 61);
-  --spectrum-global-color-static-celery-500: rgb(15, 172, 38);
-  --spectrum-global-color-static-celery-600: rgb(0, 150, 20);
-  --spectrum-global-color-static-celery-700: rgb(0, 128, 15);
-  --spectrum-global-color-static-chartreuse-300: rgb(176, 222, 27);
-  --spectrum-global-color-static-chartreuse-400: rgb(157, 203, 13);
-  --spectrum-global-color-static-chartreuse-500: rgb(139, 182, 4);
-  --spectrum-global-color-static-chartreuse-600: rgb(122, 162, 0);
-  --spectrum-global-color-static-chartreuse-700: rgb(106, 141, 0);
-  --spectrum-global-color-static-yellow-200: rgb(250, 237, 123);
-  --spectrum-global-color-static-yellow-300: rgb(250, 224, 23);
-  --spectrum-global-color-static-yellow-400: rgb(238, 205, 0);
-  --spectrum-global-color-static-yellow-500: rgb(221, 185, 0);
-  --spectrum-global-color-static-yellow-600: rgb(201, 164, 0);
-  --spectrum-global-color-static-yellow-700: rgb(181, 144, 0);
-  --spectrum-global-color-static-magenta-200: rgb(253, 127, 175);
-  --spectrum-global-color-static-magenta-300: rgb(242, 98, 157);
-  --spectrum-global-color-static-magenta-400: rgb(226, 68, 135);
-  --spectrum-global-color-static-magenta-500: rgb(205, 40, 111);
-  --spectrum-global-color-static-magenta-600: rgb(179, 15, 89);
-  --spectrum-global-color-static-magenta-700: rgb(149, 0, 72);
-  --spectrum-global-color-static-fuchsia-400: rgb(228, 93, 230);
-  --spectrum-global-color-static-fuchsia-500: rgb(211, 63, 212);
-  --spectrum-global-color-static-fuchsia-600: rgb(188, 39, 187);
-  --spectrum-global-color-static-fuchsia-700: rgb(163, 10, 163);
-  --spectrum-global-color-static-purple-400: rgb(178, 121, 250);
-  --spectrum-global-color-static-purple-500: rgb(161, 93, 246);
-  --spectrum-global-color-static-purple-600: rgb(142, 67, 234);
-  --spectrum-global-color-static-purple-700: rgb(120, 43, 216);
-  --spectrum-global-color-static-purple-800: rgb(98, 23, 190);
-  --spectrum-global-color-static-indigo-200: rgb(178, 181, 255);
-  --spectrum-global-color-static-indigo-300: rgb(155, 159, 255);
-  --spectrum-global-color-static-indigo-400: rgb(132, 137, 253);
-  --spectrum-global-color-static-indigo-500: rgb(109, 115, 246);
-  --spectrum-global-color-static-indigo-600: rgb(87, 93, 232);
-  --spectrum-global-color-static-indigo-700: rgb(68, 74, 208);
-  --spectrum-global-color-static-seafoam-200: rgb(75, 206, 199);
-  --spectrum-global-color-static-seafoam-300: rgb(32, 187, 180);
-  --spectrum-global-color-static-seafoam-400: rgb(0, 166, 160);
-  --spectrum-global-color-static-seafoam-500: rgb(0, 145, 139);
-  --spectrum-global-color-static-seafoam-600: rgb(0, 124, 118);
-  --spectrum-global-color-static-seafoam-700: rgb(0, 103, 99);
+  --spectrum-global-color-static-black: rgb(0 0 0);
+  --spectrum-global-color-static-white: rgb(255 255 255);
+  --spectrum-global-color-static-blue: rgb(0 87 191);
+  --spectrum-global-color-static-gray-50: rgb(255 255 255);
+  --spectrum-global-color-static-gray-75: rgb(255 255 255);
+  --spectrum-global-color-static-gray-100: rgb(255 255 255);
+  --spectrum-global-color-static-gray-200: rgb(235 235 235);
+  --spectrum-global-color-static-gray-300: rgb(217 217 217);
+  --spectrum-global-color-static-gray-400: rgb(179 179 179);
+  --spectrum-global-color-static-gray-500: rgb(146 146 146);
+  --spectrum-global-color-static-gray-600: rgb(110 110 110);
+  --spectrum-global-color-static-gray-700: rgb(71 71 71);
+  --spectrum-global-color-static-gray-800: rgb(34 34 34);
+  --spectrum-global-color-static-gray-900: rgb(0 0 0);
+  --spectrum-global-color-static-blue-200: rgb(130 193 251);
+  --spectrum-global-color-static-blue-300: rgb(98 173 247);
+  --spectrum-global-color-static-blue-400: rgb(66 151 244);
+  --spectrum-global-color-static-blue-500: rgb(27 127 245);
+  --spectrum-global-color-static-blue-600: rgb(4 105 227);
+  --spectrum-global-color-static-blue-700: rgb(0 87 190);
+  --spectrum-global-color-static-blue-800: rgb(0 72 153);
+  --spectrum-global-color-static-red-400: rgb(237 64 48);
+  --spectrum-global-color-static-red-500: rgb(217 28 21);
+  --spectrum-global-color-static-red-600: rgb(187 2 2);
+  --spectrum-global-color-static-red-700: rgb(154 0 0);
+  --spectrum-global-color-static-orange-400: rgb(250 139 26);
+  --spectrum-global-color-static-orange-500: rgb(233 117 0);
+  --spectrum-global-color-static-orange-600: rgb(209 97 0);
+  --spectrum-global-color-static-orange-700: rgb(182 80 0);
+  --spectrum-global-color-static-green-400: rgb(29 169 115);
+  --spectrum-global-color-static-green-500: rgb(0 148 97);
+  --spectrum-global-color-static-green-600: rgb(0 126 80);
+  --spectrum-global-color-static-green-700: rgb(0 105 65);
+  --spectrum-global-color-static-celery-200: rgb(126 229 114);
+  --spectrum-global-color-static-celery-300: rgb(87 212 86);
+  --spectrum-global-color-static-celery-400: rgb(48 193 61);
+  --spectrum-global-color-static-celery-500: rgb(15 172 38);
+  --spectrum-global-color-static-celery-600: rgb(0 150 20);
+  --spectrum-global-color-static-celery-700: rgb(0 128 15);
+  --spectrum-global-color-static-chartreuse-300: rgb(176 222 27);
+  --spectrum-global-color-static-chartreuse-400: rgb(157 203 13);
+  --spectrum-global-color-static-chartreuse-500: rgb(139 182 4);
+  --spectrum-global-color-static-chartreuse-600: rgb(122 162 0);
+  --spectrum-global-color-static-chartreuse-700: rgb(106 141 0);
+  --spectrum-global-color-static-yellow-200: rgb(250 237 123);
+  --spectrum-global-color-static-yellow-300: rgb(250 224 23);
+  --spectrum-global-color-static-yellow-400: rgb(238 205 0);
+  --spectrum-global-color-static-yellow-500: rgb(221 185 0);
+  --spectrum-global-color-static-yellow-600: rgb(201 164 0);
+  --spectrum-global-color-static-yellow-700: rgb(181 144 0);
+  --spectrum-global-color-static-magenta-200: rgb(253 127 175);
+  --spectrum-global-color-static-magenta-300: rgb(242 98 157);
+  --spectrum-global-color-static-magenta-400: rgb(226 68 135);
+  --spectrum-global-color-static-magenta-500: rgb(205 40 111);
+  --spectrum-global-color-static-magenta-600: rgb(179 15 89);
+  --spectrum-global-color-static-magenta-700: rgb(149 0 72);
+  --spectrum-global-color-static-fuchsia-400: rgb(228 93 230);
+  --spectrum-global-color-static-fuchsia-500: rgb(211 63 212);
+  --spectrum-global-color-static-fuchsia-600: rgb(188 39 187);
+  --spectrum-global-color-static-fuchsia-700: rgb(163 10 163);
+  --spectrum-global-color-static-purple-400: rgb(178 121 250);
+  --spectrum-global-color-static-purple-500: rgb(161 93 246);
+  --spectrum-global-color-static-purple-600: rgb(142 67 234);
+  --spectrum-global-color-static-purple-700: rgb(120 43 216);
+  --spectrum-global-color-static-purple-800: rgb(98 23 190);
+  --spectrum-global-color-static-indigo-200: rgb(178 181 255);
+  --spectrum-global-color-static-indigo-300: rgb(155 159 255);
+  --spectrum-global-color-static-indigo-400: rgb(132 137 253);
+  --spectrum-global-color-static-indigo-500: rgb(109 115 246);
+  --spectrum-global-color-static-indigo-600: rgb(87 93 232);
+  --spectrum-global-color-static-indigo-700: rgb(68 74 208);
+  --spectrum-global-color-static-seafoam-200: rgb(75 206 199);
+  --spectrum-global-color-static-seafoam-300: rgb(32 187 180);
+  --spectrum-global-color-static-seafoam-400: rgb(0 166 160);
+  --spectrum-global-color-static-seafoam-500: rgb(0 145 139);
+  --spectrum-global-color-static-seafoam-600: rgb(0 124 118);
+  --spectrum-global-color-static-seafoam-700: rgb(0 103 99);
   --spectrum-global-color-opacity-100: 1;
   --spectrum-global-color-opacity-90: 0.9;
   --spectrum-global-color-opacity-80: 0.8;
@@ -268,10 +268,10 @@
   --spectrum-semantic-presence-color-1: var(--spectrum-global-color-static-red-500);
   --spectrum-semantic-presence-color-2: var(--spectrum-global-color-static-orange-400);
   --spectrum-semantic-presence-color-3: var(--spectrum-global-color-static-yellow-400);
-  --spectrum-semantic-presence-color-4: rgb(75, 204, 162);
-  --spectrum-semantic-presence-color-5: rgb(0, 199, 255);
-  --spectrum-semantic-presence-color-6: rgb(0, 140, 184);
-  --spectrum-semantic-presence-color-7: rgb(126, 75, 243);
+  --spectrum-semantic-presence-color-4: rgb(75 204 162);
+  --spectrum-semantic-presence-color-5: rgb(0 199 255);
+  --spectrum-semantic-presence-color-6: rgb(0 140 184);
+  --spectrum-semantic-presence-color-7: rgb(126 75 243);
   --spectrum-semantic-presence-color-8: var(--spectrum-global-color-static-fuchsia-600);
 
   /* spectrum-dimensionGlobals.css */
@@ -336,9 +336,9 @@
 
   /* spectrum-fontGlobals.css */
   --spectrum-global-font-family-base: adobe-clean, 'Source Sans Pro', -apple-system,
-    BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Trebuchet MS', 'Lucida Grande', sans-serif;
-  --spectrum-global-font-family-serif: adobe-clean-serif, 'Source Serif Pro', Georgia, serif;
-  --spectrum-global-font-family-code: 'Source Code Pro', Monaco, monospace;
+    blinkmacsystemfont, 'Segoe UI', roboto, ubuntu, 'Trebuchet MS', 'Lucida Grande', sans-serif;
+  --spectrum-global-font-family-serif: adobe-clean-serif, 'Source Serif Pro', georgia, serif;
+  --spectrum-global-font-family-code: 'Source Code Pro', monaco, monospace;
   --spectrum-global-font-weight-thin: 100;
   --spectrum-global-font-weight-ultra-light: 200;
   --spectrum-global-font-weight-light: 300;
@@ -611,8 +611,8 @@
   --spectrum-alias-background-color-default: var(--spectrum-gray-100);
   --spectrum-alias-background-color-disabled: var(--spectrum-gray-200);
   --spectrum-alias-background-color-transparent: transparent;
-  --spectrum-alias-background-color-label-gray: rgb(112, 112, 112);
-  --spectrum-alias-background-color-quickactions-overlay: rgba(0, 0, 0, 0.2);
+  --spectrum-alias-background-color-label-gray: rgb(112 112 112);
+  --spectrum-alias-background-color-quickactions-overlay: rgb(0 0 0 / 20%);
   --spectrum-alias-placeholder-text-color: var(--spectrum-gray-800);
   --spectrum-alias-placeholder-text-color-hover: var(--spectrum-gray-900);
   --spectrum-alias-placeholder-text-color-down: var(--spectrum-gray-900);
@@ -641,13 +641,13 @@
   --spectrum-alias-border-color-mid: var(--spectrum-gray-300);
   --spectrum-alias-border-color-dark: var(--spectrum-gray-400);
   --spectrum-alias-border-color-transparent: transparent;
-  --spectrum-alias-border-color-translucent-dark: rgba(0, 0, 0, 0.05);
-  --spectrum-alias-border-color-translucent-darker: rgba(0, 0, 0, 0.1);
+  --spectrum-alias-border-color-translucent-dark: rgb(0 0 0 / 5%);
+  --spectrum-alias-border-color-translucent-darker: rgb(0 0 0 / 10%);
   --spectrum-alias-focus-color: var(--spectrum-blue-800);
   --spectrum-alias-focus-ring-color: var(--spectrum-alias-focus-color);
   --spectrum-alias-track-color-default: var(--spectrum-gray-300);
   --spectrum-alias-track-color-disabled: var(--spectrum-gray-300);
-  --spectrum-alias-track-color-over-background: rgba(255, 255, 255, 0.2);
+  --spectrum-alias-track-color-over-background: rgb(255 255 255 / 20%);
   --spectrum-alias-icon-color: var(--spectrum-gray-700);
   --spectrum-alias-icon-color-over-background: var(--spectrum-global-color-static-white);
   --spectrum-alias-icon-color-hover: var(--spectrum-gray-900);
@@ -661,7 +661,7 @@
   --spectrum-alias-icon-color-selected-focus: var(--spectrum-blue-1000);
   --spectrum-alias-icon-color-error: var(--spectrum-red-800);
   --spectrum-alias-toolbar-background-color: var(--spectrum-gray-100);
-  --spectrum-alias-colorhandle-outer-border-color: rgba(0, 0, 0, 0.42);
+  --spectrum-alias-colorhandle-outer-border-color: rgb(0 0 0 / 42%);
   --spectrum-alias-categorical-color-1: var(--spectrum-global-color-static-seafoam-200);
   --spectrum-alias-categorical-color-2: var(--spectrum-global-color-static-indigo-700);
   --spectrum-alias-categorical-color-3: var(--spectrum-global-color-static-orange-500);
@@ -678,7 +678,6 @@
   --spectrum-alias-categorical-color-14: var(--spectrum-global-color-static-fuchsia-500);
   --spectrum-alias-categorical-color-15: var(--spectrum-global-color-static-magenta-200);
   --spectrum-alias-categorical-color-16: var(--spectrum-global-color-static-yellow-200);
-
   --spectrum-alias-toggle-color-default: var(--spectrum-gray-600);
   --spectrum-alias-toggle-color-hover: var(--spectrum-gray-700);
   --spectrum-alias-toggle-color-key-focus: var(--spectrum-gray-700);
@@ -686,32 +685,27 @@
   --spectrum-alias-toggle-color-selected-hover: var(--spectrum-gray-800);
   --spectrum-alias-toggle-color-selected-key-focus: var(--spectrum-gray-800);
   --spectrum-alias-toggle-color-selected-down: var(--spectrum-gray-900);
-
   --spectrum-actionbutton-background-color-disabled: transparent;
   --spectrum-actionbutton-border-color-disabled: var(--spectrum-gray-300);
-
   --spectrum-actionbutton-quiet-background-color-hover: var(--spectrum-gray-200);
   --spectrum-actionbutton-quiet-background-color-key-focus: var(--spectrum-gray-200);
   --spectrum-actionbutton-quiet-background-color-down: var(--spectrum-gray-300);
-
-  --spectrum-actionbutton-static-black-border-color: rgba(0, 0, 0, 0.4);
-  --spectrum-actionbutton-static-black-border-color-hover: rgba(0, 0, 0, 0.55);
-  --spectrum-actionbutton-static-black-border-color-key-focus: rgba(0, 0, 0, 0.55);
-  --spectrum-actionbutton-static-black-border-color-down: rgba(0, 0, 0, 0.7);
-  --spectrum-actionbutton-static-black-border-color-disabled: rgba(0, 0, 0, 0.25);
-  --spectrum-actionbutton-static-black-border-color-selected-disabled: rgba(0, 0, 0, 0.1);
+  --spectrum-actionbutton-static-black-border-color: rgb(0 0 0 / 40%);
+  --spectrum-actionbutton-static-black-border-color-hover: rgb(0 0 0 / 55%);
+  --spectrum-actionbutton-static-black-border-color-key-focus: rgb(0 0 0 / 55%);
+  --spectrum-actionbutton-static-black-border-color-down: rgb(0 0 0 / 70%);
+  --spectrum-actionbutton-static-black-border-color-disabled: rgb(0 0 0 / 25%);
+  --spectrum-actionbutton-static-black-border-color-selected-disabled: rgb(0 0 0 / 10%);
   --spectrum-actionbutton-static-black-background-color: transparent;
   --spectrum-actionbutton-static-black-background-color-disabled: transparent;
-
-  --spectrum-actionbutton-static-white-border-color: rgba(255, 255, 255, 0.4);
-  --spectrum-actionbutton-static-white-border-color-hover: rgba(255, 255, 255, 0.55);
-  --spectrum-actionbutton-static-white-border-color-key-focus: rgba(255, 255, 255, 0.55);
-  --spectrum-actionbutton-static-white-border-color-down: rgba(255, 255, 255, 0.7);
-  --spectrum-actionbutton-static-white-border-color-disabled: rgba(255, 255, 255, 0.25);
-  --spectrum-actionbutton-static-white-border-color-selected-disabled: rgba(255, 255, 255, 0.1);
+  --spectrum-actionbutton-static-white-border-color: rgb(255 255 255 / 40%);
+  --spectrum-actionbutton-static-white-border-color-hover: rgb(255 255 255 / 55%);
+  --spectrum-actionbutton-static-white-border-color-key-focus: rgb(255 255 255 / 55%);
+  --spectrum-actionbutton-static-white-border-color-down: rgb(255 255 255 / 70%);
+  --spectrum-actionbutton-static-white-border-color-disabled: rgb(255 255 255 / 25%);
+  --spectrum-actionbutton-static-white-border-color-selected-disabled: rgb(255 255 255 / 10%);
   --spectrum-actionbutton-static-white-background-color: transparent;
   --spectrum-actionbutton-static-white-background-color-disabled: transparent;
-
   --spectrum-combobox-fieldbutton-inset: 0;
   --spectrum-combobox-fieldbutton-border-left-width: var(--spectrum-alias-input-border-size);
   --spectrum-combobox-fieldbutton-focus-ring-border-radius: var(
@@ -719,13 +713,10 @@
   );
   --spectrum-combobox-fieldbutton-start-border-radius: 0;
   --spectrum-combobox-fieldbutton-end-border-radius: var(--spectrum-alias-border-radius-regular);
-
   --spectrum-actiongroup-compact-button-gap: calc(-1 * var(--spectrum-actionbutton-border-size));
-
   --spectrum-alias-neutral-background-color: var(
     --spectrum-neutral-subdued-background-color-default
   );
-
   --spectrum-breadcrumb-separator-icon-position-adjustment: var(
     --spectrum-global-dimension-size-10
   );

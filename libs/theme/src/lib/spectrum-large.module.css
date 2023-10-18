@@ -311,12 +311,15 @@
   --spectrum-selectlist-option-icon-padding-y: var(--spectrum-global-dimension-static-size-200);
   --spectrum-selectlist-option-icon-margin-top: var(--spectrum-global-dimension-static-size-50);
   --spectrum-selectlist-option-height: var(--spectrum-global-dimension-static-size-600);
+
   /* BEGIN RSP PATCH */
+
   /*
     This is not correct in DNA. Renamed from padding-y to padding-height to fix docs issue where fallback var replaced this value
     (due to old spectrum-css postcss-custom-properties-custom-mapping plugin).
   */
   --spectrum-selectlist-option-padding-height: var(--spectrum-global-dimension-static-size-160);
+
   /* END RSP PATCH */
   --spectrum-selectlist-thumbnail-option-icon-padding-y: var(
     --spectrum-global-dimension-static-size-200
@@ -334,10 +337,13 @@
   --spectrum-meter-large-border-radius: 4px;
   --spectrum-meter-small-border-radius: 3px;
   --spectrum-pagination-page-button-line-height: 32px;
+
   /* BEGIN RSP PATCH */
+
   /* fix popover in edge https://github.com/adobe/react-spectrum/pull/402 */
   --spectrum-overlay-positive-transform-distance: 8px;
   --spectrum-overlay-negative-transform-distance: -8px;
+
   /* END RSP PATCH */
   --spectrum-picker-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
   --spectrum-picker-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
@@ -432,10 +438,13 @@
   );
   --spectrum-switch-track-width: var(--spectrum-global-dimension-static-size-450);
   --spectrum-switch-handle-border-radius: 9px;
+
   /* BEGIN RSP PATCH */
+
   /* fix switch in edge: https://github.com/adobe/react-spectrum/pull/90 */
   --spectrum-switch-handle-transform-x-ltr: 18px;
   --spectrum-switch-handle-transform-x-rtl: -18px;
+
   /* END RSP PATCH */
   --spectrum-switch-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
   --spectrum-switch-emphasized-focus-ring-border-radius-key-focus: var(
@@ -524,9 +533,12 @@
   --spectrum-tool-high-emphasis-touch-hit-x: var(--spectrum-global-dimension-static-size-50);
   --spectrum-tool-high-emphasis-touch-hit-y: var(--spectrum-global-dimension-static-size-50);
   --spectrum-tooltip-padding-bottom: 6px;
+
   /* BEGIN RSP PATCH */
+
   /* Old value is deprecated, bumping to new value for now: https://git.corp.adobe.com/Spectrum/spectrum-dna/blob/53f6efb0d81ec6829048a53a9e8389b450f46dee/data/elements/tooltip/TooltipBase.mjs#L36 */
   --spectrum-tooltip-content-max-width: var(--spectrum-global-dimension-size-2000);
+
   /* END RSP PATCH */
   --spectrum-tooltip-info-padding-bottom: 6px;
   --spectrum-tooltip-info-content-max-width: 126px;
