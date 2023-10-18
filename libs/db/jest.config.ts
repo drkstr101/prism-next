@@ -22,7 +22,7 @@ export default {
   transform: {
     '^.+\\.[tj]s$': ['@swc/jest', swcJestConfig],
   },
-  moduleFileExtensions: ['ts', 'js', 'html'],
+  moduleFileExtensions: ['ts', 'js', 'json', 'html'],
   testEnvironment: 'node',
   coverageDirectory: '../../coverage/libs/db',
 };
