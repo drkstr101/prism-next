@@ -49,6 +49,15 @@
       "options": {
         "lintFilePatterns": ["libs/theme/**/*.css", "libs/theme/**/*.scss"]
       }
+    },
+    "publish": {
+      "executor": "@theunderscorer/nx-semantic-release:semantic-release",
+      "options": {
+        "github": true,
+        "changelog": true,
+        "npm": true,
+        "tagFormat": "theme-v${VERSION}"
+      }
     }
   }
 }

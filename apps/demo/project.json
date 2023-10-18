@@ -71,6 +71,15 @@
       "options": {
         "lintFilePatterns": ["apps/demo/**/*.css", "apps/demo/**/*.scss"]
       }
+    },
+    "publish": {
+      "executor": "@theunderscorer/nx-semantic-release:semantic-release",
+      "options": {
+        "github": true,
+        "changelog": true,
+        "npm": true,
+        "tagFormat": "demo-v${VERSION}"
+      }
     }
   },
   "tags": []
