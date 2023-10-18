@@ -59,6 +59,7 @@
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
+      "dependsOn": ["stylelint"],
       "options": {
         "lintFilePatterns": ["apps/home/**/*.{ts,tsx,js,jsx}"]
       }
@@ -70,6 +71,13 @@
         "changelog": true,
         "npm": true,
         "tagFormat": "home-v${VERSION}"
+      }
+    },
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/home/**/*.css", "apps/home/**/*.scss"]
       }
     }
   },

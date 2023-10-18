@@ -8,6 +8,7 @@
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
+      "dependsOn": ["stylelint"],
       "options": {
         "lintFilePatterns": ["libs/theme/**/*.{ts,tsx,js,jsx}"]
       }
@@ -40,6 +41,13 @@
           "ci": true,
           "codeCoverage": true
         }
+      }
+    },
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/theme/**/*.css", "libs/theme/**/*.scss"]
       }
     }
   }
