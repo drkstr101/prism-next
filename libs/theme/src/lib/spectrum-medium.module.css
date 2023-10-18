@@ -326,7 +326,6 @@
     static 7px value since a fallback isn't generated anymore due to the rename.
   */
   --spectrum-selectlist-option-padding-height: 7px;
-
   /* END RSP PATCH */
   --spectrum-selectlist-thumbnail-option-icon-padding-y: var(
     --spectrum-global-dimension-static-size-125
