@@ -8,4 +8,5 @@ export default {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/apps/home',
+  setupFilesAfterEnv: ['../../tools/scripts/setup-jsdom-env.ts'],
 };

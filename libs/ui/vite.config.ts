@@ -5,7 +5,7 @@ import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 
 export default defineConfig({
-  cacheDir: '../../node_modules/.vite/theme',
+  cacheDir: '../../node_modules/.vite/ui',
 
   plugins: [
     react(),
@@ -25,7 +25,7 @@ export default defineConfig({
   // Configuration for building your library.
   // See: https://vitejs.dev/guide/build.html#library-mode
   build: {
-    lib: { entry: 'src/index.ts', name: 'theme', fileName: 'index', formats: ['es', 'cjs'] },
+    lib: { entry: 'src/index.ts', name: 'ui', fileName: 'index', formats: ['es', 'cjs'] },
     rollupOptions: { external: ["'react'", "'react-dom'", "'react/jsx-runtime'"] },
   },
 });
