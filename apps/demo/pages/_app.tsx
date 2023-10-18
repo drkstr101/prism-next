@@ -1,24 +1,26 @@
-import { ActionButton, Flex, Grid, Provider, View, defaultTheme } from '@adobe/react-spectrum';
+import { ActionButton, Flex, Grid, Provider, View } from '@adobe/react-spectrum';
+import { ColorScheme, neutralTheme } from '@prism-next/theme';
 import { ToastContainer } from '@react-spectrum/toast';
 import { enableTableNestedRows } from '@react-stately/flags';
-import { ColorScheme } from '@react-types/provider';
 import Light from '@spectrum-icons/workflow/Light';
 import Moon from '@spectrum-icons/workflow/Moon';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import './styles.css';
 
-function CustomApp({ Component, pageProps }: AppProps) {
+// Import global styles from theme
+import '@prism-next/theme';
+
+function DemoApp({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState<ColorScheme>('light');
-
   const router = useRouter();
   const themeIcons = { dark: <Moon />, light: <Light /> };
   const otherTheme: ColorScheme = theme === 'light' ? 'dark' : 'light';
+
   enableTableNestedRows();
 
   return (
-    <Provider theme={defaultTheme} colorScheme={theme} router={{ navigate: router.push }}>
+    <Provider theme={neutralTheme} colorScheme={theme} router={{ navigate: router.push }}>
       <Grid
         areas={['header', 'content']}
         columns={['1fr']}
@@ -42,4 +44,4 @@ function CustomApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default CustomApp;
+export default DemoApp;
