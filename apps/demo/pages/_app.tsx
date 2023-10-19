@@ -1,17 +1,17 @@
-import { ClientProvider } from '@prism-next/ui';
+import { ApplicationFrame } from '@prism-next/ui';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 
-// Import global styles from theme
+// Import global styles with side-effects
 import '@prism-next/theme';
 
 function DemoApp({ Component, pageProps }: AppProps) {
-  // Inject a client-side router to delegate navigation
+  // Inject a client-side router to delegate navigation after fully hydrated
   const router = useRouter();
   return (
-    <ClientProvider router={{ navigate: router.push }}>
+    <ApplicationFrame router={{ navigate: router.push }}>
       <Component {...pageProps} />
-    </ClientProvider>
+    </ApplicationFrame>
   );
 }
 

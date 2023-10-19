@@ -1,14 +1,24 @@
 'use client';
 
-import { ActionButton, Flex, Grid, Provider, ProviderProps, View } from '@adobe/react-spectrum';
-import { ColorScheme, neutralTheme } from '@prism-next/theme';
+import { ActionButton, Flex, Grid, Provider, View, lightTheme } from '@adobe/react-spectrum';
+import { ColorScheme } from '@prism-next/theme';
 import { ToastContainer } from '@react-spectrum/toast';
 import { enableTableNestedRows } from '@react-stately/flags';
 import Light from '@spectrum-icons/workflow/Light';
 import Moon from '@spectrum-icons/workflow/Moon';
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
 
-export function ClientProvider({ children, ...props }: ProviderProps) {
+export interface ClientRouter {
+  navigate: (path: string) => void;
+}
+
+export interface ApplicationFrameProps {
+  children: ReactNode;
+  router: ClientRouter;
+}
+
+export function ApplicationFrame({ children, router }: ApplicationFrameProps) {
+  // TODO make initial selection from system prefs
   const [theme, setTheme] = useState<ColorScheme>('light');
   const themeIcons = { dark: <Moon />, light: <Light /> };
   const otherTheme: ColorScheme = theme === 'light' ? 'dark' : 'light';
@@ -16,7 +26,7 @@ export function ClientProvider({ children, ...props }: ProviderProps) {
   enableTableNestedRows();
 
   return (
-    <Provider theme={neutralTheme} colorScheme={theme} {...props}>
+    <Provider theme={lightTheme} colorScheme={theme} router={router}>
       <Grid
         areas={['header', 'content']}
         columns={['1fr']}
@@ -31,11 +41,11 @@ export function ClientProvider({ children, ...props }: ProviderProps) {
             {themeIcons[otherTheme]}
           </ActionButton>
         </Flex>
-        <View>{children}</View>
+        <View backgroundColor="gray-50">{children}</View>
       </Grid>
       <ToastContainer />
     </Provider>
   );
 }
 
-export default ClientProvider;
+export default ApplicationFrame;
