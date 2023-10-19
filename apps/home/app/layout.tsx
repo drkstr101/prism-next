@@ -1,3 +1,4 @@
+import '@prism-next/theme';
 import './global.css';
 
 export const metadata = {
