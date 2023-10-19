@@ -1,0 +1,255 @@
+:root {
+  /* Distance between the edge of the fullscreen dialog and header */
+  --application-frame-fullscreen-padding-top: calc(var(--application-frame-padding) - 10px);
+
+  /* The font-size of the fullscreen dialog header */
+  --application-frame-fullscreen-header-text-size: 28px;
+
+  /* The font-weight of the fullscreen dialog header */
+  --application-frame-fullscreen-header-text-font-weight: 100;
+
+  /* Distance between top and bottom of dialog and edge of window for fullscreen dialog */
+  --application-frame-fullscreen-margin: 40px;
+  --application-frame-small-width: 400px;
+  --application-frame-medium-width: 480px;
+  --application-frame-large-width: 640px;
+  --application-frame-max-width: 90vw;
+  --application-frame-max-height: 90%;
+  --application-frame-hero-height: var(--spectrum-global-dimension-size-1600);
+  --application-frame-alert-width: var(--application-frame-medium-width);
+  --application-frame-button-margin: var(--spectrum-global-dimension-size-200);
+  --application-frame-content-margin-bottom: var(--spectrum-global-dimension-size-450);
+  --application-frame-content-min-height: var(--spectrum-component-single-line-height);
+
+  /* 12px desktop (medium scale) and 8px mobile (large scale) */
+  --application-frame-close-button-padding: calc(26px - var(--spectrum-global-dimension-size-175));
+  --application-frame-close-button-size: var(--spectrum-global-dimension-size-400);
+  --application-frame-gap-size: var(--spectrum-global-dimension-size-200);
+}
+
+
+.ApplicationFrame {
+  /* Be a flexbox to allow a full sized content area that scrolls */
+  display: flex;
+
+  /* Allow 100% width, taking into account padding */
+  box-sizing: border-box;
+
+  /* Be no bigger than max-width, but also be 90% if the viewport is smaller than max-width */
+  width: fit-content;
+  min-width: var(--application-frame-min-width);
+  max-width: 100%;
+  max-height: inherit;
+  overflow: hidden;
+  outline: none;
+
+  --application-frame-padding-x: var(--application-frame-padding);
+  --application-frame-padding-y: var(--application-frame-padding);
+  --application-frame-border-radius: var(--spectrum-border-radius);
+
+  border-radius: var(--application-frame-border-radius);
+}
+
+.ApplicationFrame .ApplicationFrame-grid {
+  display: grid;
+  grid-template: "hero hero    hero    hero        hero        hero" auto ".    .       .       .           .           ." var(--application-frame-padding-y) ".    heading header  header      typeIcon    ." auto ".    divider divider divider     divider     ." auto ".    content content content     content     ." 1fr ".    footer  footer  buttonGroup buttonGroup ." auto ".    .       .       .           .           ." var(--application-frame-padding-y) / var(--application-frame-padding-x) auto 1fr auto minmax(0, auto) var(--application-frame-padding-x);
+  width: 100%;
+}
+
+.ApplicationFrame-heading {
+  grid-area: heading;
+  margin: 0;
+  font-size: var(--application-frame-title-text-size);
+  font-weight: var(--application-frame-title-text-font-weight);
+  line-height: var(--application-frame-title-text-line-height);
+  outline: none; /* Hide focus outline */
+  padding-inline-end: var(--application-frame-gap-size);
+
+  &.ApplicationFrame-heading--noHeader {
+    grid-area: heading-start / heading-start / header-end / header-end;
+    padding-inline-end: 0;
+  }
+
+  &.ApplicationFrame-heading--noHeader.ApplicationFrame-heading--noTypeIcon {
+    grid-area: heading-start / heading-start / typeIcon-end / typeIcon-end;
+    padding-inline-end: 0;
+  }
+}
+
+.ApplicationFrame-header {
+  grid-area: header;
+  display: flex;
+
+  /* Without this, buttons will be stretched */
+  align-items: center;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  outline: none; /* Hide focus outline around header */
+  min-width: fit-content; /* prevents header with width 0px */
+
+  &.ApplicationFrame-header--noTypeIcon {
+    grid-area: header-start / header-start / typeIcon-end / typeIcon-end;
+    padding-inline-end: 0;
+  }
+}
+
+.ApplicationFrame-typeIcon {
+  grid-area: typeIcon;
+}
+
+.ApplicationFrame .ApplicationFrame-divider {
+  grid-area: divider;
+  width: 100%;
+  margin-top: var(--application-frame-rule-margin-top);
+  margin-bottom: var(--application-frame-rule-margin-bottom);
+}
+
+.ApplicationFrame--noDivider {
+  .ApplicationFrame-divider {
+    display: none;
+  }
+}
+
+.ApplicationFrame-content {
+  grid-area: content;
+  box-sizing: border-box;
+
+  /*
+  v2 is currently worse, inputs that get focus rings get a slight clipping unless overflow: visible replaces this line
+  we should think of a better way to handle this, see padding/margin below for fix
+  */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  outline: none; /* Hide focus outline */
+  font-size: var(--application-frame-content-text-size);
+  font-weight: var(--application-frame-content-text-font-weight);
+  line-height: var(--application-frame-content-text-line-height);
+
+  /*
+  this is kinda dumb, but needed for the keyboard focus rings so they don't get clipped.
+  is there a better way to treat this
+  it's needed in every instance of overflow being set to anything other than visible
+  */
+  padding: calc(var(--spectrum-global-dimension-size-25) * 2);
+  margin: calc(var(--spectrum-global-dimension-size-25) * -2);
+
+  /* for zoom (a11y) and short windows */
+  min-height: var(--application-frame-content-min-height);
+}
+
+
+.ApplicationFrame-footer {
+  grid-area: footer;
+
+  /* this padding isn't built into the grid because it disappears with this footer */
+  padding-block-start: var(--spectrum-global-dimension-static-size-500);
+  display: flex;
+  flex-wrap: wrap;
+  outline: none; /* Hide focus outline */
+
+  /* Both selectors are required to override the button + button rule */
+  > *,
+  > .spectrum-Button + .spectrum-Button {
+    margin-bottom: 0;
+  }
+}
+
+.ApplicationFrame-buttonGroup {
+  grid-area: buttonGroup;
+
+  /* this padding isn't built into the grid because it disappears with this buttonGroup */
+  padding-block-start: var(--spectrum-global-dimension-static-size-500);
+  display: flex;
+  justify-content: flex-end;
+
+  /* this padding should be safe as button group is always end aligned */
+  padding-inline-start: var(--application-frame-gap-size);
+
+  /* Fixes Firefox buttongroup overflow (switch from horizontal buttongroup to vertical buttongroup) */
+  max-width: 100%;
+
+  &.ApplicationFrame-buttonGroup--noFooter {
+    grid-area: footer-start / footer-start / buttonGroup-end / buttonGroup-end;
+  }
+}
+
+@media screen and (width <= 700px) {
+  /* for zoom (a11y) */
+  .ApplicationFrame {
+    --application-frame-padding: var(--spectrum-global-dimension-static-size-300);
+  }
+
+  .ApplicationFrame .ApplicationFrame-grid {
+    grid-template: "hero hero    hero    hero        hero        hero" auto ".    .       .       .           .           ." var(--application-frame-padding-y) ".    heading heading heading     typeIcon    ." auto ".    header  header  header      header      ." auto ".    divider divider divider     divider     ." auto ".    content content content     content     ." 1fr ".    footer  footer  buttonGroup buttonGroup ." auto ".    .       .       .           .           ." var(--application-frame-padding-y) / var(--application-frame-padding-x) auto 1fr auto minmax(0, auto) var(--application-frame-padding-x);
+  }
+
+  .ApplicationFrame-heading {
+    &.ApplicationFrame-heading--noHeader {
+      grid-area: heading;
+    }
+
+    /* match specificity from above where it had noHeader, but here header won't prevent heading from expanding */
+    &.ApplicationFrame-heading--noTypeIcon.ApplicationFrame-heading--noTypeIcon {
+      grid-area: heading-start / heading-start / typeIcon-end / typeIcon-end;
+    }
+  }
+
+  .ApplicationFrame-header {
+    &.ApplicationFrame-header--noTypeIcon {
+      grid-area: header;
+    }
+  }
+
+  .ApplicationFrame .ApplicationFrame-header {
+    justify-content: flex-start;
+  }
+
+  .ApplicationFrame-footer {
+    min-width: fit-content;
+  }
+
+  .ApplicationFrame-buttonGroup {
+    min-width: 0;
+  }
+}
+
+/* additional a11y support by moving scrolling from content to dialog */
+@media screen and (height <= 400px) {
+  .ApplicationFrame .ApplicationFrame-grid {
+    border-top-left-radius: var(--application-frame-border-radius);
+    border-top-right-radius: var(--application-frame-border-radius);
+    overflow-y: auto;
+    grid-template: "hero hero        hero        hero        hero        hero" auto ".    .           .           .           .           ." var(--application-frame-padding-y) ".    heading     heading     heading     typeIcon    ." auto ".    header      header      header      header      ." auto ".    divider     divider     divider     divider     ." auto ".    content     content     content     content     ." 1fr ".    footer      footer      footer      footer      ." auto ".    buttonGroup buttonGroup buttonGroup buttonGroup ." auto ".    .           .           .           .           ." var(--application-frame-padding-y) / var(--application-frame-padding-x) auto 1fr auto minmax(0, auto) var(--application-frame-padding-x);
+  }
+
+  .ApplicationFrame-heading {
+    &.ApplicationFrame-heading--noHeader {
+      grid-area: heading;
+      padding-inline-end: 0;
+    }
+
+    /* match specificity from above where it had noHeader, but here header won't prevent heading from expanding */
+
+    &.ApplicationFrame-heading--noTypeIcon.ApplicationFrame-heading--noTypeIcon {
+      grid-area: heading-start / heading-start / typeIcon-end / typeIcon-end;
+      padding-inline-end: 0;
+    }
+  }
+
+  .ApplicationFrame-header {
+    &.ApplicationFrame-header--noTypeIcon {
+      grid-area: header;
+      padding-inline-end: 0;
+    }
+  }
+
+  .ApplicationFrame-content {
+    overflow-y: visible;
+    height: min-content;
+    display: inline-table;
+  }
+
+  .ApplicationFrame-footer + .ApplicationFrame-buttonGroup {
+    padding-block-start: calc(var(--spectrum-global-dimension-size-25) * 2);
+  }
+}
