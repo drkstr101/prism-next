@@ -7,7 +7,7 @@
     "start": "nx run-many --target=serve --parallel --build-libs-from-source",
     "build": "nx run-many --target=build --parallel",
     "test": "nx run-many --target=test --parallel --coverage -- --runInBand",
-    "lint": "nx format:check && nx run-many --target=lint --parallel",
+    "lint": "nx format:check && nx run-many --target=lint --parallel --fix",
     "format": "nx format",
     "e2e": "nx run cypress:e2e --skip-nx-cache",
     "prepare": "husky install"
@@ -15,6 +15,7 @@
   "dependencies": {
     "@adobe/react-spectrum": "^3.26.0",
     "@nx/next": "16.10.0",
+    "@prisma/client": "^5.1.1",
     "@react-spectrum/color": "^3.0.0-beta.16",
     "@react-spectrum/inlinealert": "^3.0.0-rc.0",
     "@react-spectrum/toast": "^3.0.0-alpha.0",
@@ -34,6 +35,7 @@
     "@commitlint/cli": "^17.8.0",
     "@commitlint/config-conventional": "^17.8.0",
     "@nx-extend/e2e-runner": "^7.0.0",
+    "@nx-tools/nx-prisma": "^5.0.3",
     "@nx/cypress": "16.10.0",
     "@nx/eslint-plugin": "16.10.0",
     "@nx/jest": "16.10.0",
@@ -53,6 +55,7 @@
     "@theunderscorer/nx-semantic-release": "^2.6.2",
     "@types/config": "^3.3.1",
     "@types/jest": "^29.5.5",
+    "@types/lodash": "^4.14.200",
     "@types/node": "18.18.5",
     "@types/react": "18.2.28",
     "@types/react-dom": "18.2.13",
@@ -82,6 +85,7 @@
     "nx-stylelint": "^16.0.1",
     "postcss": "^8.4.31",
     "prettier": "^2.8.8",
+    "prisma": "^5.1.1",
     "sass": "^1.69.4",
     "style-dictionary": "^3.8.0",
     "stylelint": "^15.0.0",
@@ -95,6 +99,9 @@
     "vitest": "~0.32.0"
   },
   "packageManager": "yarn@3.6.4",
+  "prisma": {
+    "seed": "nx run db:seed"
+  },
   "nx": {
     "includedScripts": []
   }
