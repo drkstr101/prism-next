@@ -116,10 +116,7 @@ export function Index() {
 
       <main className={styles.main}>
         <Heading level={1}>
-          React Spectrum +{' '}
-          <Link>
-            <a href="https://nextjs.org">Next.js</a>
-          </Link>
+          Spectrum Design System Demo
         </Heading>
 
         <Flex direction="column" gap="size-125">
