@@ -13,8 +13,8 @@ jobs:
     name: CI - Main Job
     uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.13.1
     with:
-      # set working branch to design-system
-      main-branch-name: design-system
+      # set working branch to demo
+      main-branch-name: demo
       number-of-agents: 3
       init-commands: |
         yarn nx-cloud start-ci-run --stop-agents-after="build" --agent-count=3
