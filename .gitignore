@@ -50,6 +50,9 @@ Thumbs.db
 # Next.js
 .next
 
+# Nx Cache
+.nx/cache
+
 # Env files
 .env
 .env.*
