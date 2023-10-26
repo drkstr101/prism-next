@@ -25,7 +25,7 @@ export class ExpressServer {
     // this.server = await startServer(this.app);
     const host = process.env['HOST'] ?? 'localhost';
     const port = parseInt(process.env['PORT'], 10) || 3000;
-    this.server = this.app.listen(port, host, () => {
+    this.server = await this.app.listen(port, host, () => {
       console.log(`Listening at http://${host}:${port}/api`);
     });
 
