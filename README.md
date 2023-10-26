@@ -1,6 +1,6 @@
 # prism-next
 
-A demonstration of best practices for developing applications with pubsweet.
+Realtime chat demo with NextJs and Express.
 
 ## Get Started
 
