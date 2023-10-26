@@ -31,6 +31,7 @@
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "dependsOn": ["prisma-generate"],
       "options": {
         "jestConfig": "libs/db/jest.config.ts",
         "passWithNoTests": true
