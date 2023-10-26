@@ -1,9 +1,9 @@
 {
-  "name": "@prism-next/db",
+  "name": "@prism-next/config",
   "version": "0.0.1",
   "dependencies": {
     "@swc/helpers": "~0.5.2",
-    "@prisma/client": "^5.1.1"
+    "config": "^3.3.9"
   },
   "type": "commonjs",
   "main": "./src/index.js",
