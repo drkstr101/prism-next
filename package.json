@@ -4,7 +4,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "nx run-many --target=serve --parallel --build-libs-from-source",
+    "start": "nx run-many --target=serve --parallel",
     "build": "nx run-many --target=build --parallel",
     "test": "nx run-many --target=test --parallel --coverage -- --runInBand",
     "lint": "nx format:check && nx run-many --target=lint --parallel --fix",
