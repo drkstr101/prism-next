@@ -115,9 +115,7 @@ export function Index() {
       </Head>
 
       <main className={styles.main}>
-        <Heading level={1}>
-          Spectrum Design System Demo
-        </Heading>
+        <Heading level={1}>Spectrum Design System Demo</Heading>
 
         <Flex direction="column" gap="size-125">
           <Section title="Buttons">
