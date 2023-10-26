@@ -20,6 +20,11 @@
             "target": "demo:serve:development",
             "checkUrl": "http://localhost:4210/demo",
             "checkMaxTries": 32
+          },
+          {
+            "target": "server:serve:development",
+            "checkUrl": "http://localhost:3000/health",
+            "checkMaxTries": 32
           }
         ]
       },
@@ -31,6 +36,9 @@
             },
             {
               "target": "demo:serve:production"
+            },
+            {
+              "target": "server:serve:production"
             }
           ]
         }
