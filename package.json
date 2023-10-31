@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@adobe/react-spectrum": "^3.26.0",
+    "@coko/server": "^3.0.0",
     "@nx/next": "17.0.2",
     "@prisma/client": "^5.1.1",
     "@react-spectrum/color": "^3.0.0-beta.16",
@@ -72,6 +73,7 @@
     "@vitest/ui": "~0.32.0",
     "babel-jest": "^29.7.0",
     "cypress": "^13.3.1",
+    "dotenv": "^16.3.1",
     "eslint": "~8.51.0",
     "eslint-config-next": "13.5.5",
     "eslint-config-prettier": "9.0.0",
@@ -103,6 +105,9 @@
     "vite": "~4.3.9",
     "vite-plugin-dts": "~2.3.0",
     "vitest": "~0.32.0"
+  },
+  "resolutions": {
+    "pg": "8.11.3"
   },
   "packageManager": "yarn@3.6.4",
   "prisma": {

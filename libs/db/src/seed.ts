@@ -1,7 +1,9 @@
 import { db } from './lib/db';
+import { seedDb } from './lib/seed/seed-db';
 
 async function main() {
   console.log(`Seeding database with mock data...`);
+  await seedDb();
 }
 
 main()

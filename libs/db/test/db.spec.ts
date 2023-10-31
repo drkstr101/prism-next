@@ -12,7 +12,7 @@ describe('prism-next.db', () => {
       expect(db).toBeInstanceOf(PrismaClient);
     });
 
-    test.each(['channel', 'message', 'rolePermission', 'user', 'userRole'])(
+    test.each(['identity', 'teamMember', 'team', 'user'])(
       'SHOULD provide a %s repository',
       (schema) => {
         expect(get(db, schema)).toBeTruthy();
