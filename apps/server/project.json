@@ -26,6 +26,7 @@
     "serve": {
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
+      "dependsOn": ["^build"],
       "options": {
         "buildTarget": "server:build"
       },

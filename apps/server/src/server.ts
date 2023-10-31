@@ -1,3 +1,4 @@
+import { startServer } from '@coko/server';
 import { once } from 'events';
 import express from 'express';
 import http from 'http';
@@ -17,18 +18,12 @@ export class ExpressServer {
   public async boot() {
     // if (process.env['NODE_ENV'] !== 'production') {
     //   logger.info('Seeding development database.');
-    //   await seedDb();
+    //   await migrate();
     // }
   }
 
   public async start() {
-    // this.server = await startServer(this.app);
-    const host = process.env['HOST'] ?? 'localhost';
-    const port = parseInt(process.env['PORT'], 10) || 3000;
-    this.server = await this.app.listen(port, host, () => {
-      console.log(`Listening at http://${host}:${port}/api`);
-    });
-
+    this.server = await startServer(this.app);
     await once(this.server, 'listening');
   }
 
