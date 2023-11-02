@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.production.yml
+    kompose.version: 1.31.2 (a92241f79)
+  creationTimestamp: null
+  labels:
+    app: kotahi-flax-site
+  name: kotahi-flax-site
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kotahi-flax-site
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose.production.yml
+        kompose.version: 1.31.2 (a92241f79)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/kotahi-default: "true"
+        app: kotahi-flax-site
+    spec:
+      containers:
+        - env:
+            - name: FLAX_CLIENT_API_URL
+            - name: FLAX_CLIENT_ID
+            - name: FLAX_CLIENT_SECRET
+            - name: FLAX_EXPRESS_PORT
+              value: "3000"
+          image: cokoapps/kotahi-flax:0.2.27
+          name: kotahi-flax-site
+          ports:
+            - containerPort: 3000
+              hostPort: 8082
+              protocol: TCP
+            - containerPort: 80
+              hostPort: 8081
+              protocol: TCP
+          resources: {}
+      restartPolicy: Always
+status: {}

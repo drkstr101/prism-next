@@ -1,0 +1,163 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.production.yml
+    kompose.version: 1.31.2 (a92241f79)
+  creationTimestamp: null
+  labels:
+    app: server
+  name: server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: server
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose.production.yml
+        kompose.version: 1.31.2 (a92241f79)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/kotahi-default: "true"
+        app: server
+    spec:
+      containers:
+        - env:
+            - name: ALLOW_MANUAL_IMPORT
+            - name: ARCHIVE_PERIOD_DAYS
+            - name: AUTO_IMPORT_HOUR_UTC
+            - name: CLIENT_HOST
+            - name: CLIENT_PORT
+            - name: CLIENT_PROTOCOL
+            - name: CROSSREF_DEPOSITOR_EMAIL
+            - name: CROSSREF_DEPOSITOR_NAME
+            - name: CROSSREF_LOGIN
+            - name: CROSSREF_PASSWORD
+            - name: CROSSREF_PUBLICATION_TYPE
+              value: article
+            - name: CROSSREF_REGISTRANT
+            - name: CROSSREF_USE_SANDBOX
+              value: "false"
+            - name: DISABLE_EVENT_NOTIFICATIONS
+            - name: DISPLAY_SHORTID_AS_IDENTIFIER
+              value: "false"
+            - name: DOI_PREFIX
+            - name: FLAX_CLIENT_API_URL
+            - name: FLAX_CLIENT_ID
+            - name: FLAX_CLIENT_SECRET
+            - name: FLAX_EXPRESS_HOST
+              value: kotahi-flax-site
+            - name: FLAX_EXPRESS_PORT
+            - name: FLAX_EXPRESS_PROTOCOL
+              value: http
+            - name: FLAX_SITE_URL
+            - name: GMAIL_NOTIFICATION_EMAIL_AUTH
+            - name: GMAIL_NOTIFICATION_EMAIL_SENDER
+            - name: GMAIL_NOTIFICATION_PASSWORD
+            - name: GOOGLE_SPREADSHEET_CLIENT_EMAIL
+            - name: GOOGLE_SPREADSHEET_ID
+            - name: GOOGLE_SPREADSHEET_PRIVATE_KEY
+            - name: HYPOTHESIS_ALLOW_TAGGING
+            - name: HYPOTHESIS_API_KEY
+            - name: HYPOTHESIS_GROUP
+            - name: HYPOTHESIS_REVERSE_FIELD_ORDER
+            - name: INSTANCE_GROUPS
+              value: kotahi:aperture
+            - name: JOURNAL_ABBREVIATED_NAME
+            - name: JOURNAL_HOMEPAGE
+            - name: JOURNAL_NAME
+            - name: KOTAHI_API_TOKENS
+            - name: MANUSCRIPTS_TABLE_COLUMNS
+            - name: NODE_ENV
+              value: production
+            - name: NOTIFICATION_EMAIL_AUTOMATED
+              value: "false"
+            - name: NOTIFICATION_EMAIL_CC_ENABLED
+              value: "false"
+            - name: ORCID_CLIENT_ID
+            - name: ORCID_CLIENT_SECRET
+            - name: POSTGRES_DB
+            - name: POSTGRES_HOST
+            - name: POSTGRES_PASSWORD
+            - name: POSTGRES_PORT
+            - name: POSTGRES_USER
+            - name: PUBLICATION_LICENSE_URL
+            - name: PUBLIC_CLIENT_HOST
+              value: 0.0.0.0
+            - name: PUBLISHED_ARTICLE_LOCATION_PREFIX
+            - name: PUBLISHING_WEBHOOK_REF
+            - name: PUBLISHING_WEBHOOK_TOKEN
+            - name: PUBLISHING_WEBHOOK_URL
+            - name: PUBSWEET_SECRET
+            - name: REVIEW_HIDE
+              value: "false"
+            - name: REVIEW_SHARED
+              value: "false"
+            - name: S3_ACCESS_KEY_ID
+              value: nonRootUser
+            - name: S3_BUCKET
+              value: uploads
+            - name: S3_HOST
+              value: localhost
+            - name: S3_PORT
+            - name: S3_PROTOCOL
+              value: http
+            - name: S3_SECRET_ACCESS_KEY
+              value: nonRootPassword
+            - name: SEMANTIC_SCHOLAR_IMPORTS_RECENCY_PERIOD_DAYS
+            - name: SERVER_HOST
+            - name: SERVER_PORT
+            - name: SERVER_PROTOCOL
+            - name: SERVICE_ANYSTYLE_CLIENT_ID
+            - name: SERVICE_ANYSTYLE_HOST
+            - name: SERVICE_ANYSTYLE_PORT
+            - name: SERVICE_ANYSTYLE_PROTOCOL
+            - name: SERVICE_ANYSTYLE_SECRET
+            - name: SERVICE_PAGEDJS_CLIENT_ID
+            - name: SERVICE_PAGEDJS_HOST
+            - name: SERVICE_PAGEDJS_PORT
+            - name: SERVICE_PAGEDJS_PROTOCOL
+            - name: SERVICE_PAGEDJS_SECRET
+            - name: SERVICE_XSWEET_CLIENT_ID
+              value: 59a3392b-0c4f-4318-bbe2-f86eff6d3de4
+            - name: SERVICE_XSWEET_HOST
+              value: xsweet
+            - name: SERVICE_XSWEET_PORT
+              value: "3004"
+            - name: SERVICE_XSWEET_PROTOCOL
+              value: http
+            - name: SERVICE_XSWEET_SECRET
+              value: asldkjLKJLaslkdf897kjhKUJH
+            - name: TEAM_TIMEZONE
+            - name: USE_APERTURE_EMAIL
+            - name: USE_COLAB_BIOPHYSICS_IMPORT
+              value: "false"
+            - name: USE_COLAB_EMAIL
+              value: "false"
+            - name: USE_SANDBOXED_ORCID
+              value: "false"
+          image: server
+          name: server
+          ports:
+            - containerPort: 3000
+              hostPort: 3000
+              protocol: TCP
+          resources: {}
+          volumeMounts:
+            - mountPath: /home/node/app/uploads
+              name: server-claim0
+            - mountPath: /home/node/app/config
+              name: server-claim1
+      restartPolicy: Always
+      volumes:
+        - name: server-claim0
+          persistentVolumeClaim:
+            claimName: server-claim0
+        - name: server-claim1
+          persistentVolumeClaim:
+            claimName: server-claim1
+status: {}

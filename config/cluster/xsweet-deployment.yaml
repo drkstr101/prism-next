@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.production.yml
+    kompose.version: 1.31.2 (a92241f79)
+  creationTimestamp: null
+  labels:
+    app: xsweet
+  name: xsweet
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: xsweet
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose.production.yml
+        kompose.version: 1.31.2 (a92241f79)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/kotahi-default: "true"
+        app: xsweet
+    spec:
+      containers:
+        - args:
+            - node
+            - server/startServer.js
+          command:
+            - sh
+            - scripts/wait-for-it
+            - db-xsweet:5432
+            - --
+            - sh
+            - scripts/setupDevServer.sh
+          env:
+            - name: NODE_ENV
+              value: development
+            - name: POSTGRES_DB
+              value: xsweet_dev
+            - name: POSTGRES_HOST
+              value: db-xsweet
+            - name: POSTGRES_PASSWORD
+              value: xsweet_user_password
+            - name: POSTGRES_PORT
+              value: "5432"
+            - name: POSTGRES_USER
+              value: xsweet_user_dev
+            - name: PUBSWEET_SECRET
+              value: xsweet_dev_secret
+            - name: SERVER_PORT
+              value: "3004"
+          image: cokoapps/xsweet:2.1.2
+          name: xsweet
+          ports:
+            - containerPort: 3004
+              hostPort: 3004
+              protocol: TCP
+          resources: {}
+      restartPolicy: Always
+status: {}

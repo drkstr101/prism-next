@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.production.yml
+    kompose.version: 1.31.2 (a92241f79)
+  creationTimestamp: null
+  labels:
+    app: db-xsweet
+  name: db-xsweet
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: db-xsweet
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose.production.yml
+        kompose.version: 1.31.2 (a92241f79)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/kotahi-default: "true"
+        app: db-xsweet
+    spec:
+      containers:
+        - env:
+            - name: POSTGRES_DB
+              value: xsweet_dev
+            - name: POSTGRES_PASSWORD
+              value: xsweet_user_password
+            - name: POSTGRES_USER
+              value: xsweet_user_dev
+          image: postgres:14.4-alpine
+          name: db-xsweet
+          resources: {}
+          volumeMounts:
+            - mountPath: /docker-entrypoint-initdb.d/init-pgboss.sql
+              name: db-xsweet-claim0
+      restartPolicy: Always
+      volumes:
+        - name: db-xsweet-claim0
+          persistentVolumeClaim:
+            claimName: db-xsweet-claim0
+status: {}
