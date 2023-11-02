@@ -1,0 +1,9 @@
+# Add files here to ignore them from prettier formatting
+/.nx/cache
+/.yarn
+/dist
+/coverage
+/tmp
+
+.next/
+.sst/
