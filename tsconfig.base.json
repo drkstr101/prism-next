@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@prism/auth": ["libs/auth/src/index.ts"],
+      "@prism/storage": ["libs/storage/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
